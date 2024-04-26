@@ -1,0 +1,26 @@
+.bg-padrao {
+  background-color: #5E4141;
+}
+
+.bg-padrao-claro {
+  background-color: #6D5454;
+}
+
+.fonte-logo {
+  color: white;
+  font-family: "Leckerli One", cursive;
+  font-style: normal;
+}
+
+.sombras-nav {
+  box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.5);
+}
+
+.sombras-footer {
+  box-shadow: 0px -5px 10px rgba(0, 0, 0, 0.5);
+}
+
+.info {
+  color: white;
+  list-style-type: none;
+}
