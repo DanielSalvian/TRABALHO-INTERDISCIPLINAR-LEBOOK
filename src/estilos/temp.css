@@ -1,0 +1,14 @@
+.bg-padrao {
+    background-color: #5E4141;
+}
+
+.bg-padrao-claro {
+    background-color: #6D5454;
+}
+
+.fonte-logo {
+    color: white;
+    font-family: "Leckerli One", cursive;
+    font-weight: 400;
+    font-style: normal;
+}

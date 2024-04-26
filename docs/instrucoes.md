@@ -1,0 +1,1 @@
+Toda a documentação deve ser movida para esta pasta e organizada de acordo com a divisão.
