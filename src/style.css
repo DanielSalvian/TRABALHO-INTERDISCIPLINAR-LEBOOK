@@ -6,6 +6,10 @@
   background-color: #6D5454;
 }
 
+.bg-linha{
+  background-color: #5e4141a8;
+}
+
 .fonte-logo {
   color: white;
   font-family: "Leckerli One", cursive;
@@ -23,4 +27,19 @@
 .info {
   color: white;
   list-style-type: none;
+}
+
+.btn-padrao{
+  color: white;
+  background-color: #5E4141;
+  border-color: #5E4141;
+  border-style: solid;
+  padding: 3px 10px 3px 10px;
+}
+
+.btn-padrao:hover{
+  color: rgba(255, 255, 255, 0.966);
+  background-color: #5e4141ee;
+  border-color: #5E4141;
+  border-style: solid;
 }
