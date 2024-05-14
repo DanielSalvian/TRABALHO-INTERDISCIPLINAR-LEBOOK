@@ -1,0 +1,178 @@
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+
+#content{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 60px;
+    margin-bottom: 100px;
+}
+
+
+.button {
+    width: 250px;
+    text-align: center;
+    line-height: 1;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: .75rem;
+    background-color: #6D5454;
+    color: #fff;
+    border-radius: 10rem;
+    font-weight: 500;
+    font-size: 30px;
+    padding: .75rem 1.5rem;
+    padding-left: 50px;
+    margin-top: 20px;
+    margin-left: -20px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    transition: background-color .3s;
+  }
+  
+  .button__icon-wrapper {
+    flex-shrink: 0;
+    width: 30px;
+    height: 30px;
+    position: relative;
+    color: #6D5454;
+    background-color: #fff;
+    border-radius: 50%;
+    display: grid;
+    place-items: center;
+    overflow: hidden;
+  }
+  
+  .button:hover {
+    background-color: #362a2a
+  }
+  
+  .button:hover .button__icon-wrapper {
+    color: #000;
+  }
+  
+  .button__icon-svg--copy {
+    position: absolute;
+    transform: translate(-150%, 150%);
+  }
+  
+  .button:hover .button__icon-svg:first-child {
+    transition: transform .3s ease-in-out;
+    transform: translate(150%, -150%);
+  }
+  
+  .button:hover .button__icon-svg--copy {
+    transition: transform .3s ease-in-out .1s;
+    transform: translate(0);
+  }
+.img-livro{
+width: 30%;
+}
+
+.parte-2{
+    display: inline;
+    max-height: 300px;
+    padding-top: 20px;
+    padding-right: 500px;
+    padding-bottom: 200px;
+}
+
+#resumo-livro{
+    border-top:2px solid black ;
+}
+
+.title-resumo{
+    padding-left: 100px;
+    padding-top: 50px;
+    font-size: 40px;
+    font-weight: 700;
+}
+
+.description{
+    font-size: 18px;
+    padding-left: 300px;
+    padding-right: 300px;
+    margin-top: 60px;
+    margin-bottom: 100px;
+}
+
+@media screen and (max-width: 1025px) {
+    .img-livro{
+        width: 40%;
+        margin-left: 100px;
+  }
+  .parte-2{
+    padding-top: 0px;
+    padding-right: 100px;
+    padding-bottom: 200px;
+}
+.button{
+    margin-left: 100px;
+    margin-top: 30px;
+}
+.description{
+    font-size: 20px;
+    padding-left: 100px;
+    padding-right: 100px;
+}
+}
+
+@media screen and (max-width: 690px) {
+    .img-livro{
+        width: 40%;
+  }
+  .button{
+    margin-left:60px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+.parte-2{
+    font-size: 25px;
+    padding-right: 50px;
+    width: 700px;
+    padding-bottom: 200px;
+}
+
+}
+
+@media screen and (max-width: 799px) {
+    .parte-2{
+        padding-right: 0px;
+        padding-left: 0px;
+    }
+
+}
+
+@media screen and (max-width: 420px) {
+    
+#content{
+    display: block;
+   text-align: center;
+}
+
+.parte-2{
+    font-size: 20px;
+}
+
+.button{
+    margin-left: 0px;
+}
+.img-livro{
+    margin-left: 0;
+    }
+
+.description{
+   padding-left: 20px;
+   padding-right: 30px;
+}
+
+.title-resumo{
+    padding-left: 0px;
+    text-align: center;
+    font-size: 30px;
+}
+}
