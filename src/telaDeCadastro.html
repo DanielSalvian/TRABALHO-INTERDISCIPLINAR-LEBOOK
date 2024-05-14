@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>LêBook: Perfil</title>
+    <title>LêBook: Cadastro</title>
 
     <!--Referência do Style.css-->
     <link rel="stylesheet" href="style.css">
@@ -32,120 +32,47 @@
                         <a class="nav-link text-white" href="#">Home</a>
                         <a class="nav-link text-white" href="#">Acervo</a>
                         <a class="nav-link text-white" href="telaDosReservados.html">Reservados</a>
-                        <a class="nav-link text-white active" href="telaDePerfil.html" aria-current="page">Perfil</a>
+                        <a class="nav-link text-white active" aria-current="page"
+                            href="telaDeCadastro.html">Cadastrar</a>
                     </div>
                 </div>
             </div>
         </nav>
     </header>
 
-    <main class="p-3">
-        <div class="row justify-content-left d-flex mt-2 mb-2">
+    <main class="p-3 d-flex justify-content-center">
+        <div class="col-5 row justify-content-center d-flex mt-2 mb-2">
 
-
-            <div class="col-4 row justify-content-center d-flex">
-
-
-                <div class="col-7 d-flex justify-content-center mb-2 mt-2">
-                    <img src="temporaria.jpg" class="rounded-pill" style="width: 250px; height: 250px;">
-                </div>
-
+            <div class="col-7 d-flex justify-content-center mb-2 mt-2">
+                <img src="temporaria.jpg" class="rounded-pill" style="width: 190px; height: 190px;">
             </div>
 
-            <div class="col-4 row justify-content-left d-flex">
-
-                <div class="col-7 d-flex justify-content-center pb-2 mb-2 mt-2">
-                    <button class=" btn-padrao" disabled style="width: 400px; height: 30px;">Nome do usuário</button>
-                </div>
-
-                <div class="col-7 d-flex justify-content-center pt-2 mb-2 mt-2">
-                    <textbox>E-mail:ㅤ</textbox>
-                    <input type="E-mail" class="form-control rounded-pill" placeholder="E-mail"
-                        style="width: 200px; height: 30px;">
-
-                </div>
-
-                <div class="col-7 d-flex justify-content-center pb-2 mb-2 mt-2">
-                    <textbox> Livros reservados:</textbox>
-                    <input type="Livros reservados" class="form-control rounded-pill" placeholder="Quantidade"
-                        style="width: 200px; height: 30px;">
-                </div>
-
-                <div class="col-7 d-flex justify-content-center pb-2 mb-2 mt-2">
-                    <button type="button" class="rounded-pill btn-padrao" style="width: 200px; height: 30px;">Todas as
-                        reservas</button>
-                </div>
-
+            <div class="col-7 d-flex justify-content-center pt-2 mb-2 mt-2 ln-topo">
+                <input id="nomeCadastro" type="text" class="form-control rounded-pill" placeholder="Nome"
+                    style="width: 200px; height: 30px;"> 
             </div>
 
-
-        </div>
-        <div class="col-12 bg-linha rounded-pill " style="width: 1620px; height: 5px;"></div>
-
-        <div class="col-12 row justify-content-center d-flex">
-
-
-            <div class="col-4 row justify-content-left d-flex">
-
-                <div class="col-7 d-flex justify-content-center pb-2 mb-1 mt-4">
-                    <button type="button" class="rounded btn-padrao" disabled style="width: 400px; height: 30px;">Livros
-                        lidos</button>
-                </div>
-
-                <div class="col-7 d-flex justify-content-center pt-2 mb-2 mt-2">
-                    <div class="col-7 d-flex justify-content-center mb-4 mt-2">
-                        <img src="livro.jpg" style="width: 300px; height: 200px;">
-
-                    </div>
-
-
-                </div>
-                <div class="col-7 d-flex justify-content-center pb-2 mb-2 mt-2">
-                    <button class=" btn-padrao rounded" disabled style="width: 400px; height: 30px;">Nome do
-                        livro</button>
-                </div>
+            <div class="col-7 d-flex justify-content-center pt-2 mb-2 mt-2">
+                <input id="cpfCadastro" type="text" class="form-control rounded-pill" placeholder="CPF"
+                    style="width: 200px; height: 30px;"> 
             </div>
 
-            <div class="col-4 row justify-content-left d-flex">
-
-
-
-                <div class="col-7 d-flex justify-content-center pt-5 mb-4 mt-5">
-                    <div class="col-7 d-flex justify-content-center mb-1 mt-1">
-                        <img src="livro.jpg" style="width: 300px; height: 200px;">
-
-                    </div>
-
-
-                </div>
-                <div class="col-7 d-flex justify-content-center pb-2 mb-2 mt-2">
-                    <button class=" btn-padrao rounded" disabled style="width: 400px; height: 30px;">Nome do
-                        livro</button>
-                </div>
+            <div class="col-7 d-flex justify-content-center pt-2 mb-2 mt-2">
+                <input id="emailCadastro" type="email" class="form-control rounded-pill" placeholder="email@lebook.com"
+                    style="width: 200px; height: 30px;">
             </div>
 
-            <div class="col-4 row justify-content-left d-flex">
+            <div class="col-7 d-flex justify-content-center pb-2 mb-2 mt-2  ln-baixo">
+                <input id="senhaCadastro" type="password" class="form-control rounded-pill" placeholder="senha"
+                    style="width: 200px; height: 30px;">
+            </div>
 
-
-                <div class="col-7 d-flex justify-content-center pt-5 mb-4 mt-5">
-                    <div class="col-7 d-flex justify-content-center mb-1 mt-1">
-                        <img src="livro.jpg" style="width: 300px; height: 200px;">
-
-                    </div>
-
-
-                </div>
-                <div class="col-7 d-flex justify-content-center pb-2 mb-2 mt-2">
-                    <button class=" btn-padrao rounded" disabled style="width: 400px; height: 30px;">Nome do
-                        livro</button>
-                </div>
+            <div class="col-7 d-flex justify-content-center pb-2 mb-2 mt-2">
+                <button type="button" class="rounded-pill btn-padrao btn-hover"
+                    style="width: 200px; height: 30px;">Cadastrar</button>
             </div>
 
         </div>
-
-
-
-
     </main>
 
     <footer class="sombras-footer bg-padrao m-0 p-0 d-block text-white container-fluid">

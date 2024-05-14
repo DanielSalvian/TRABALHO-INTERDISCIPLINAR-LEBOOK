@@ -3,7 +3,7 @@
 
 <head>
   <meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>LêBook: Login</title>
+  <title>LêBook: Reservados</title>
 
   <!--Referência do Style.css-->
   <link rel="stylesheet" href="style.css">
@@ -28,40 +28,50 @@
         </button>
         <div class="collapse navbar-collapse justify-content-end" id="navbarNavAltMarkup">
           <div class="navbar-nav nav-underline pe-5">
-            <a class="nav-link text-white"href="#">Home</a>
+            <a class="nav-link text-white" href="#">Home</a>
             <a class="nav-link text-white" href="#">Acervo</a>
-            <a class="nav-link text-white" href="telaDosReservados.html">Reservados</a>
-            <a class="nav-link text-white active" aria-current="page" href="telaDeLogin.html">Entrar</a>
+            <a class="nav-link text-white active" href="telaDosReservados.html" aria-current="page">Reservados</a>
+            <a class="nav-link text-white" href="telaDePerfil.html">Perfil</a>
           </div>
         </div>
       </div>
     </nav>
   </header>
 
-  <main class="p-3 d-flex justify-content-center">
-    <div class="col-5 row justify-content-center d-flex mt-2 mb-2">
+  <main class="p-3">
+    <!--Espaço para adicionar os livros-->
+    <div id="sessao-livros" class="row justify-content-center d-flex mt-2 mb-2">
 
-        <div class="col-7 d-flex justify-content-center mb-2 mt-2">
-            <img src="temporaria.jpg" class="rounded-pill" style="width: 190px; height: 190px;">
+      <div class="col-lg-4 col-sm-8 d-flex">
+        <a href="#"><img src="livro.jpg" class="sombras-nav borda-livro capa-livro"
+            style="width: 150px; height: 190px;"></a>
+        <div class="m-2">
+          <h>Nome do livro</h>
+          <p class="bg-linha rounded-pill" style="height: 5px;"></p>
+          <p class="">Devolução: 25/12/2024</p>
+          <p>Situação: Regular</p>
+          <button class="btn-padrao rounded-pill">Estender prazo</button>
+          <button class="btn-padrao rounded-pill">Devolver</button>
         </div>
 
-        <div class="col-7 d-flex justify-content-center pt-2 mb-2 mt-2 ln-topo">
-            <input id="emailLogin" type="email" class="form-control rounded-pill" placeholder="email@lebook.com"
-                style="width: 200px; height: 30px;">
+      </div>
+
+      <div class="col-lg-4 col-sm-8 d-flex">
+        <a href="#"><img src="livro.jpg" class="sombras-nav borda-livro capa-livro"
+            style="width: 150px; height: 190px;"></a>
+        <div class="m-2">
+          <h>Nome do livro</h>
+          <p class="bg-linha rounded-pill" style="height: 5px;"></p>
+          <p class="">Devolução: 25/12/2024</p>
+          <p>Situação: Regular</p>
+          <button class="btn-padrao rounded-pill">Estender prazo</button>
+          <button class="btn-padrao rounded-pill">Devolver</button>
         </div>
 
-        <div class="col-7 d-flex justify-content-center pb-2 mb-2 mt-2  ln-baixo">
-            <input id="senhaLogin" type="password" class="form-control rounded-pill" placeholder="senha"
-                style="width: 200px; height: 30px;">
-        </div>
-
-        <div class="col-7 d-flex justify-content-center pb-2 mb-2 mt-2">
-            <button type="button" class="rounded-pill btn-padrao btn-hover"
-                style="width: 200px; height: 30px;">Entrar</button>
-        </div>
+      </div>
 
     </div>
-</main>
+  </main>
 
   <footer class="sombras-footer bg-padrao m-0 p-0 d-block text-white container-fluid">
 

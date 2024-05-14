@@ -10,6 +10,16 @@
   background-color: #5e4141a8;
 }
 
+
+.ln-topo {
+  border-top: 5px solid #5e4141a8;
+}
+
+.ln-baixo{
+  border-bottom: 5px solid #5e4141a8;
+}
+
+
 .fonte-logo {
   color: white;
   font-family: "Leckerli One", cursive;
@@ -42,4 +52,34 @@
   background-color: #5e4141ee;
   border-color: #5E4141;
   border-style: solid;
+
+  transition: 0.3s;
+}
+
+.btn-hover{
+  transform: scale(1);
+  transition: 0.3s;
+}
+
+.btn-hover:hover{
+  transform: scale(1.03);
+  transition: 0.3s;
+}
+
+.borda-livro{
+  border-radius: 0% 20% 0% 0%;
+}
+
+.capa-livro{
+  transform: scale(1);
+  transition: 0.3s;
+}
+
+.capa-livro:hover{
+  transform: scale(1.03);
+  transition: 0.3s;
+}
+
+.borda-cima{
+  border-bottom: 2px solid black;
 }
