@@ -122,6 +122,46 @@ Na tela de reservados, o usuário consegue ver todos os livros reservados pelo m
 
 Na tela de adicionar livro, apenas o bibliotecário tem acesso, onde o objetivo é registrar um livro novo através das informações como o título do livro, o autor, ano de publicação, o gênero, e a quantidade disponível, podendo também adicionar o breve resumo do livro, e após isso registrando o livro no acervo. 
 
+- Script do banco de dados:
+create database lebook;
+   use lebook;
+create table livros
+     ( nome varchar(100) not null,
+     id_livro bigint(10) not null auto_increment,
+     autor varchar(100) not null,
+     resumo varchar(1000) not null,
+     genero varchar (100) not null,
+     constraint pk_id_livro primary key (id_livro),
+     constraint uq_nome unique (nome));
+create table usuario_livro
+     (cpf bigint(11) not null,
+     nome varchar(100) not null,
+     email varchar(100) not null,
+     senha varchar(100) not null,
+     id_livro bigint(10) not null auto_increment,
+     constraint pk_cpf primary key (cpf),
+     constraint pk_us_id_livro foreign key (id_livro) references livros (id_livro) on update cascade on delete cascade);
+ create table status_livro
+     ( id_livro bigint(10) not null auto_increment,
+     situação boolean,
+     constraint fk_id_livro foreign key (id_livro) references livros (id_livro) on update cascade on delete cascade);
+ create table devolucao
+     (id_livro bigint(10) not null auto_increment,
+      data date,
+      cpf bigint(11) not null,
+      constraint pk_cpf foreign key (cpf) references usuario_livro (cpf) on update cascade on delete cascade ,
+      constraint pk_dv_id_livro foreign key (id_livro) references livros (id_livro) on update cascade on delete cascade);
+create table emprestimo
+      (id_livro bigint(10) not null auto_increment,
+      data date,
+      cpf bigint(11) not null,
+      constraint emp_cpf foreign key (cpf) references usuario_livro (cpf) on update cascade on delete cascade,
+      constraint em_id_livro foreign key (id_livro) references livros (id_livro) on update cascade on delete cascade );
+drop column usuario_livro (id_livro)
+ALTER TABLE usuario_livro DROP FOREIGN KEY pk_us_id_livro
+ALTER TABLE usuario_livro DROP COLUMN id_livro
+
+
  Conclusão:
 
  Com o trabalho concluído, após a realização de todo o sistema bibliotecário para a reserva de livros dentro do acervo, para a resolução dos problemas identificados, sendo eles adicionar um filtro para identificar livros atrasados e a falta de restrição para reservar um livro que estiver em atraso. Conseguimos resolver os problemas através de uma identificação na tela de livros reservados onde mostra a data de devolução do livro e a situação dele, se estiver atrasado, não podendo ser reservado por outro usuário e assim identificado como atrasado pelo sistema. 
