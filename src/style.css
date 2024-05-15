@@ -150,3 +150,11 @@
   text-align: center; 
   width: 100%; 
 }
+
+#imageUpload {
+  display: none;
+}
+
+#bookImage {
+  cursor: pointer;
+}
