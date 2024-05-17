@@ -150,3 +150,23 @@
   text-align: center; 
   width: 100%; 
 }
+
+#imageUpload {
+  display: none;
+}
+
+#bookImage {
+  cursor: pointer;
+}
+
+.arrow-container {
+  display: flex;
+  align-items: right;
+  justify-content: right;
+  margin-left: 20px; 
+}
+
+.arrow-icon {
+  font-size: 70px; 
+  color: #5E4141;
+}

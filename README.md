@@ -70,57 +70,106 @@ O software tem como objetivo ser um sistema bibliotecário, com o foco de visual
 
 -Tela principal (deslogado): 
  
-(print da tela) 
+ ![TelaPrincipalDeslogado](https://github.com/DanielSalvian/TRABALHO-INTERDISCIPLINAR-LEBOOK/assets/114188220/f086a205-46d7-435d-8888-d360521d6f2e)
+
 
 Na tela principal estando deslogado, tem como ver alguns livros disponíveis do acervo e o objetivo é entrar / criar sua conta no botão de “Entrar” com o objetivo de assim poder reservar um livro. 
 
 -Tela principal (logado): 
 
-(print da tela) 
+ ![TelaPrincipalDeslogado](https://github.com/DanielSalvian/TRABALHO-INTERDISCIPLINAR-LEBOOK/assets/114188220/48ed0806-005e-4d34-bb89-f41cd147159a)
+
 
 Na tela principal estando logado, ainda é possível ver alguns dos livros disponíveis do acervo, porém agora já estando na conta o objetivo é ver qual o livro de interesse do usuário, e ver a disponibilidade dele para assim o mesmo conseguir reservar o livro, podendo ver através do acervo de livros disponível. 
 
 -Tela de login: 
 
-(print da tela) 
+ ![TelaLogin](https://github.com/DanielSalvian/TRABALHO-INTERDISCIPLINAR-LEBOOK/assets/114188220/421d10a5-203b-4a7c-afb7-7fa70cda6994)
+
 
 Na tela de login, o objetivo é conseguir logar na sua conta através do e-mail e da senha utilizados no cadastro. 
 
 -Tela de cadastro: 
 
-(print da tela) 
+ ![telaCadastro](https://github.com/DanielSalvian/TRABALHO-INTERDISCIPLINAR-LEBOOK/assets/114188220/cf0361bc-fedd-4ef9-bbcb-cecd8357ffcb)
+
 
 Na tela de cadastro, o objetivo é conseguir criar uma conta através no nome, cpf, e-mail e senha passados, no qual após a criação da conta pode logar e ter acesso ao acervo de livros. 
 
 -Tela de acervo: 
 
-(print da tela) 
+ ![TelaDoAcervo](https://github.com/DanielSalvian/TRABALHO-INTERDISCIPLINAR-LEBOOK/assets/114188220/373d2f63-bebe-42d9-8abf-6bc523ed2035)
+
 
 Na tela do acervo, o objetivo é o usuário ver qual livro está mais interessado dentre os disponíveis dentro do acervo, para assim realizar a reserva dele. 
 
 -Tela do livro: 
 
-(print da tela) 
+ ![TeladoLivro](https://github.com/DanielSalvian/TRABALHO-INTERDISCIPLINAR-LEBOOK/assets/114188220/7287c4b0-ffc3-4bc6-85c9-336d388064e6)
+
 
 Na tela do livro, após o usuário ter clicado no livro correspondente na tela do acervo, o usuário consegue ter acesso as informações do determinado livro, como autor, o ano de publicação, o gênero, a quantidade disponível, e o resumo do livro, para assim decidir se irá reservar ou não. 
 
 -Tela do perfil: 
 
-(print da tela) 
+ ![TeladePerfil](https://github.com/DanielSalvian/TRABALHO-INTERDISCIPLINAR-LEBOOK/assets/114188220/ce5d5895-19d0-4b99-8ed3-f04edfcde629)
+
 
 Na tela do perfil, o usuário consegue ter acesso a quantidade de livros que o mesmo reservou e saber quais livros reservou, e a todos os livros lidos. 
 
 -Tela dos reservados: 
 
-(print da tela) 
+ ![TeladosReservados](https://github.com/DanielSalvian/TRABALHO-INTERDISCIPLINAR-LEBOOK/assets/114188220/2b59c7e5-31f7-4506-89e3-5b4ae390d8ca)
+
 
 Na tela de reservados, o usuário consegue ver todos os livros reservados pelo mesmo, onde mostra a data de devolução e a situação atual do livro, tendo como objetivo a pessoa ver se irá devolver o livro ou se irá extender o prazo para ter mais tempo de leitura. 
 
 -Tela de adicionar livro (Bibliotecário): 
 
-(print da tela) 
+ ![TelaAdicionarLivro](https://github.com/DanielSalvian/TRABALHO-INTERDISCIPLINAR-LEBOOK/assets/114188220/17017fad-dde3-4193-a44f-82c0095b7133)
+
 
 Na tela de adicionar livro, apenas o bibliotecário tem acesso, onde o objetivo é registrar um livro novo através das informações como o título do livro, o autor, ano de publicação, o gênero, e a quantidade disponível, podendo também adicionar o breve resumo do livro, e após isso registrando o livro no acervo. 
+
+- Script do banco de dados:
+create database lebook;
+   use lebook;
+create table livros
+     ( nome varchar(100) not null,
+     id_livro bigint(10) not null auto_increment,
+     autor varchar(100) not null,
+     resumo varchar(1000) not null,
+     genero varchar (100) not null,
+     constraint pk_id_livro primary key (id_livro),
+     constraint uq_nome unique (nome));
+create table usuario_livro
+     (cpf bigint(11) not null,
+     nome varchar(100) not null,
+     email varchar(100) not null,
+     senha varchar(100) not null,
+     id_livro bigint(10) not null auto_increment,
+     constraint pk_cpf primary key (cpf),
+     constraint pk_us_id_livro foreign key (id_livro) references livros (id_livro) on update cascade on delete cascade);
+ create table status_livro
+     ( id_livro bigint(10) not null auto_increment,
+     situação boolean,
+     constraint fk_id_livro foreign key (id_livro) references livros (id_livro) on update cascade on delete cascade);
+ create table devolucao
+     (id_livro bigint(10) not null auto_increment,
+      data date,
+      cpf bigint(11) not null,
+      constraint pk_cpf foreign key (cpf) references usuario_livro (cpf) on update cascade on delete cascade ,
+      constraint pk_dv_id_livro foreign key (id_livro) references livros (id_livro) on update cascade on delete cascade);
+create table emprestimo
+      (id_livro bigint(10) not null auto_increment,
+      data date,
+      cpf bigint(11) not null,
+      constraint emp_cpf foreign key (cpf) references usuario_livro (cpf) on update cascade on delete cascade,
+      constraint em_id_livro foreign key (id_livro) references livros (id_livro) on update cascade on delete cascade );
+drop column usuario_livro (id_livro)
+ALTER TABLE usuario_livro DROP FOREIGN KEY pk_us_id_livro
+ALTER TABLE usuario_livro DROP COLUMN id_livro
+
 
  Conclusão:
 
