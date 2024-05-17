@@ -13,6 +13,13 @@
   <!--Fontes GoogleFonts-->
   <style>
     @import url('https://fonts.googleapis.com/css2?family=Leckerli+One&display=swap');
+
+    footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
   </style>
 </head>
 
@@ -42,47 +49,32 @@
 
   </main>
 
-  <footer class="sombras-footer bg-padrao m-0 p-0 d-block text-white container-fluid">
+  <footer class="sombras-footer bg-padrao text-white">
+    <div class="container py-5">
+      <div class="row">
+        <!-- Contatos -->
+        <div class="col-md-6 mb-4 mb-md-0">
+          <h5 class="mb-3">Métodos de contato</h5>
+          <ul class="list-unstyled">
+            <li><i class="fas fa-map-marker-alt me-2"></i> Rua C N°65 Água Branca</li>
+            <li><i class="fab fa-instagram me-2"></i> @lebook.ofc</li>
+            <li><i class="fas fa-phone me-2"></i> (31) 3392-1187</li>
+            <li><i class="far fa-envelope me-2"></i> lebook@hotmail.com</li>
+          </ul>
+        </div>
 
-    <div class="m-0 mt-2 container-fluid bg-blue text-center row">
-      <!--Contatos-->
-      <div class="col-12 col-sm-6 col-md-6 col-lg-6">
-        <ul class="info">
-          <li>
-            <p>Métodos de contato</p>
-          </li>
-          <li><a href="#" class="info"><i class="fa-solid fa-map-location-dot"></i> Rua C N°65
-              Água Branca</a></li>
-          <li><a href="#" class="info"><i class="fa-brands fa-instagram fs-5"></i>
-              @lebook.ofc</a></li>
-          <li><a href="#" class="info"><i class="fa-solid fa-phone"></i> (31) 3392-1187</a>
-          </li>
-          <li><a href="#" class="info"><i class="fa-regular fa-envelope fs-5"></i>
-              lebook@hotmail.com</a></li>
-        </ul>
+        <!-- Outros -->
+        <div class="col-md-6">
+          <h5 class="mb-3">Outros links úteis</h5>
+          <ul class="list-unstyled">
+            <li><a href="#" class="text-white">Quem somos</a></li>
+            <li><a href="#" class="text-white">Ajuda</a></li>
+            <li><a href="#" class="text-white">Dúvidas frequentes</a></li>
+            <li><a href="#" class="text-white">Termos de privacidade</a></li>
+          </ul>
+        </div>
       </div>
-
-      <!--Outros-->
-      <div class="col-12 col-sm-6 col-md-6 col-lg-6">
-        <ul class="info">
-          <li>
-            <p>Outros links úteis</p>
-          </li>
-          <li><a href="#" class="info">Quem somos</a></li>
-          <li><a href="#" class="info">Ajuda</a></li>
-          <li><a href="#" class="info">Dúvidas frequentes</a></li>
-          <li><a href="#" class="info">Termos de privacidade</a></li>
-        </ul>
-      </div>
-
     </div>
-
-    <!--Copyright-->
-    <div class="m-0 container-fluid bg-darkBlue text-center row">
-      <p>Copyright LêBook 2024©</p>
-    </div>
-
-  </footer>
 
 
   <!--Referência do script.js-->
