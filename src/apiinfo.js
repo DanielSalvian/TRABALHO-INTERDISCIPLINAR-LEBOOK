@@ -32,7 +32,7 @@ document.addEventListener("DOMContentLoaded", consumirAPI);
 
                 const cardImage = document.createElement('img');
                 cardImage.className = 'card-img-top';
-                cardImage.src = 'imgaltura.jpg';
+                cardImage.src = 'livro.jpg';
                 cardImage.style.height = '500px';
                 
 
@@ -98,7 +98,7 @@ document.addEventListener("DOMContentLoaded", consumirAPI);
                 const key = Object.keys(data)[i]; 
         
                 const card = document.createElement('div');
-                card.className = 'card col-3';
+                card.className = 'card col-2';
 
                 card.style.marginLeft = '50px';
                 card.style.marginTop = '30px';
@@ -113,8 +113,8 @@ document.addEventListener("DOMContentLoaded", consumirAPI);
 
                 const cardImage = document.createElement('img');
                 cardImage.className = 'card-img-top';
-                cardImage.src = 'imgaltura.jpg';
-                cardImage.style.height = '350px';
+                cardImage.src = 'livro.jpg';
+                cardImage.style.height = '200px';
                 
 
                 const cardContent1 = document.createElement('p');
@@ -196,7 +196,7 @@ document.addEventListener("DOMContentLoaded", consumirAPI);
         
                     const cardImage = document.createElement('img');
                     cardImage.className = 'card-img-top';
-                    cardImage.src = 'imgaltura.jpg';
+                    cardImage.src = 'livro.jpg';
                     cardImage.style.height = '350px';
         
                     const cardContent1 = document.createElement('p');
