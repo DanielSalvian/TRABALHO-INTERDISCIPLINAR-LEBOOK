@@ -107,6 +107,7 @@ document.addEventListener("DOMContentLoaded", consumirAPI);
                 const cardBody = document.createElement('div');
                 cardBody.className = 'card-body';
 
+
                 const cardTitle = document.createElement('h5');
                 cardTitle.className = 'card-title';
                 cardTitle.innerText = data[key].nome;
