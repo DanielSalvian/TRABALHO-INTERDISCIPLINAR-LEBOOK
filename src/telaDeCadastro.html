@@ -51,7 +51,7 @@
         <div class="col-5 row justify-content-center d-flex mt-2 mb-2">
 
             <div class="col-7 d-flex justify-content-center mb-2 mt-2">
-                <img src="usuariopadrão.webp" class="rounded-pill" style="width: 190px; height: 190px;">
+                <img src="estilos/Imagens/usuariopadrão.webp" class="rounded-pill" style="width: 190px; height: 190px;">
             </div>
 
             <div class="col-7 d-flex justify-content-center pt-2 mb-2 mt-2 ln-topo">
@@ -60,7 +60,7 @@
             </div>
 
             <div class="col-7 d-flex justify-content-center pt-2 mb-2 mt-2">
-                <input id="cpfCadastro" type="text" class="form-control rounded-pill" placeholder="CPF"
+                <input id="cpfCadastro" type="text" maxlength="11" class="form-control rounded-pill" placeholder="CPF"
                     style="width: 200px; height: 30px;"> 
             </div>
 
@@ -69,13 +69,13 @@
                     style="width: 200px; height: 30px;">
             </div>
 
-            <div class="col-7 d-flex justify-content-center pb-2 mb-2 mt-2  ln-baixo">
-                <input id="senhaCadastro" type="password" class="form-control rounded-pill" placeholder="senha"
+            <div class="col-7 d-flex justify-content-center pb-2 mb-2 mt-2">
+                <input id="senhaCadastro" type="password" class="form-control rounded-pill" placeholder="Senha"
                     style="width: 200px; height: 30px;">
             </div>
 
             <div class="col-7 d-flex justify-content-center pb-2 mb-2 mt-2">
-                <button type="button" class="rounded-pill btn-padrao btn-hover"
+                <button type="button" onclick="enviarDados();" class="rounded-pill btn-padrao btn-hover"
                     style="width: 200px; height: 30px;">Cadastrar</button>
             </div>
 
@@ -117,6 +117,7 @@
         crossorigin="anonymous"></script>
     <!--Referência do FontAwesome-->
     <script src="https://kit.fontawesome.com/86c1062090.js" crossorigin="anonymous"></script>
+    <script src="scripts/cadastro.js"></script>
 
 </body>
 

@@ -143,7 +143,7 @@ document.addEventListener("DOMContentLoaded", consumirAPI);
                     addItem(data[key].nome, data[key].id_livro, data[key].autor, data[key].genero, data[key].resumo);
         
                     
-                    window.location.href = 'telaDePerfil.html';
+                    window.location.href = 'telaLivro.html';
                 });
         
                 cardBody.appendChild(cardTitle);
