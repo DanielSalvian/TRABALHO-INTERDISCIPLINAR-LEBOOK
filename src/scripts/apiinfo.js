@@ -133,22 +133,11 @@ document.addEventListener("DOMContentLoaded", consumirAPI);
                 cardContent4.className = 'card-text';
                 cardContent4.innerText = `Resumo: ${data[key].resumo}`;
         
-                const cardButton = document.createElement('button');
-                cardButton.className = 'btn btn-secondary';
-                cardButton.innerText = 'Mostrar Detalhes';
-                cardButton.style.height = '40px';
-                cardButton.style.marginTop = '10px';
-                        
-                cardButton.addEventListener('click', () => {
-                    addItem(data[key].nome, data[key].id_livro, data[key].autor, data[key].genero, data[key].resumo);
-        
-                    
-                    window.location.href = 'telaLivro.html';
-                });
+
         
                 cardBody.appendChild(cardTitle);
                 cardBody.appendChild(cardImage);
-                cardBody.appendChild(cardButton);
+
                 card.appendChild(cardBody);
                         
                 apiDataDiv.appendChild(card);

@@ -39,31 +39,38 @@
   </header>
 
   <main class="p-3">
-  
-    <div class="row justify-content-center d-flex mt-2 mb-2">
+
+    <div class="row justify-content-start d-flex mt-2 mb-2">
 
 
-      <div class="col-4 row justify-content-center d-flex">
-
-
-      
-        <div class="rectangle-container">
-          <p class="rectangle-text">O Universo da Leitura a um clique</p>
-        </div>
+      <div class="col-8 row justify-content-center d-flex ms-5">
+        <p>Bem vindo!</p>
+        <p>Aqui esta uma sugestão de livro para você</p>
       </div>
-        </div>
-        
+
+    <div id="espacoRecomendacao" class="row d-flex justify-content-center">
+      <div class="col-lg-3 col-sm-8 m-2">
+        <div class=""><img id="capaLivro" src="livro.jpg" style="width: 300px; height: 380px"
+            class="sombras-nav borda-livro capa-livro"></div>
+      </div>
+      <div class="col-lg-4">
+        <h3 id="tituloLivro" class="m-3">titulo</h3>
+        <p id="autorLivro" class="m-3">autor</p>
+        <p id="generoLivro" class="m-3">genero</p>
+        <p id="resumoLivro" class="m-3">resumo</p>
+        <button id="verMaisLivro" class="btn-padrao rounded-pill m-3">Ver mais</button>
+      </div>
+
+    </div>
+
+    <div class="col-12 bg-linha rounded-pill " style="width: 100%; height: 5px;"></div>
+
+    <div id="api-datas" class="row justify-content-center">
 
 
-  </div>
-  <div class="col-12 bg-linha rounded-pill " style="width: 1620px; height: 5px;"></div>
+    </div>
 
-  <div id="api-datas" class="row justify-content-center">
 
-            
-  </div>
-
-   
   </main>
 
   <footer class="sombras-footer bg-padrao text-white">
@@ -93,16 +100,17 @@
       </div>
     </div>
 
-  <!--Referência do script.js-->
-  <script src="script.js"></script>
-  <!--Referência do Bootstrap (JS)-->
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
-    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
-    crossorigin="anonymous"></script>
-  <!--Referência do FontAwesome-->
-  <script src="https://kit.fontawesome.com/86c1062090.js" crossorigin="anonymous"></script>
+    <!--Referência do script.js-->
+    <script src="script.js"></script>
+    <!--Referência do Bootstrap (JS)-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous"></script>
+    <!--Referência do FontAwesome-->
+    <script src="https://kit.fontawesome.com/86c1062090.js" crossorigin="anonymous"></script>
 
-  <script src="scripts/apiinfo.js"></script>
+    <script src="scripts/apiinfo.js"></script>
+    <script src="scripts/logado.js"></script>
 
 </body>
 
