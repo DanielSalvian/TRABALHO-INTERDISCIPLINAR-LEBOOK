@@ -66,3 +66,14 @@ function login() {
     alert("Preencha corretamente todos os campos!");
   }
 }
+
+function mostrard() {
+  const usuarioLogado = localStorage.getItem('LoginAtual');
+  if (usuarioLogado) {
+      const usuario = JSON.parse(usuarioLogado);
+      const inputEmail = document.getElementById('emailUsuario');
+      if (inputEmail) {
+          inputEmail.value = usuario.email;
+      }
+  }
+}

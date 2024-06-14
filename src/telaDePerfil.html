@@ -16,7 +16,7 @@
     </style>
 </head>
 
-<body>
+<body onload="mostrard()">
 
     <header>
         <nav class="navbar navbar-expand-lg sombras-nav bg-padrao">
@@ -42,14 +42,10 @@
     <main class="p-3">
         <div class="row justify-content-left d-flex mt-2 mb-2">
 
-
             <div class="col-4 row justify-content-center d-flex">
-
-
                 <div class="col-7 d-flex justify-content-center mb-2 mt-2">
                     <img src="estilos/Imagens/usuariopadrão.webp" class="rounded-pill" style="width: 250px; height: 240px;">
                 </div>
-
             </div>
 
             <div class="col-4 row justify-content-left d-flex">
@@ -57,67 +53,59 @@
                 <div class="col-12 d-flex justify-content-left pb-2 mb-2 mt-2">
                     <text class="padrao rounded text-center" style="width: 100%; max-width: 400px; border: 4px solid #000000; background-color: #6D5454; height: 30px; color: #FFFFFF;">Nome do usuário</text>
                 </div>
-                
-            
+
                 <div class="col-12 d-flex flex-column flex-md-row align-items-center justify-content-left pt-2 mb-2 mt-2">
-                    <textbox class="mb-2 mb-md-0 mr-md-2">E-mail:</textbox>
-                    <input type="E-mail" class="form-control rounded-pill" placeholder="E-mail" style="width: 100%; max-width: 200px; height: 30px;">
+                    <text class="mb-2 mb-md-0 mr-md-2">E-mail:</text>
+                    <input id="emailUsuario" type="email" class="form-control rounded-pill" placeholder="E-mail" style="width: 100%; max-width: 200px; height: 30px;" readonly>
                 </div>
-            
+
                 <div class="col-12 d-flex flex-column flex-md-row align-items-center justify-content-left pb-2 mb-2 mt-2">
-                    <textbox class="mb-2 mb-md-0 mr-md-2">Livros reservados:</textbox>
-                    <input type="Livros reservados" class="form-control rounded-pill" placeholder="Quantidade" style="width: 100%; max-width: 200px; height: 30px;">
+                    <text class="mb-2 mb-md-0 mr-md-2">Livros reservados:</text>
+                    <input type="text" class="form-control rounded-pill" placeholder="Quantidade" style="width: 100%; max-width: 200px; height: 30px;">
                 </div>
-            
+
                 <div class="col-8 d-flex justify-content-center pb-2 mb-2 mt-2">
-                    <a type="button" href="telaDosReservados.html" class="rounded-pill btn-padrao" justify-content-center style="width: 100%; max-width: 200px; height: 30px;">Todas as reservas</a>
+                    <a type="button" href="telaDosReservados.html" class="rounded-pill btn-padrao" style="width: 100%; max-width: 200px; height: 30px;">Todas as reservas</a>
                 </div>
-            
+
             </div>
-            
-
-
         </div>
-        <div class="col-12 bg-linha rounded-pill " style="width: 1620px; height: 5px;"></div>
+        <div class="col-12 bg-linha rounded-pill" style="width: 1620px; height: 5px;"></div>
 
- <div>Livros lidos:</div> 
- 
+        <div>Livros lidos:</div>
+
         <div id="api-dates" class="row justify-content-center">
-
-            
+            <!-- Conteúdo dinâmico dos livros -->
         </div>
-
-
-
-
     </main>
 
     <footer class="sombras-footer bg-padrao text-white">
         <div class="container py-5">
-          <div class="row">
-            <!-- Contatos -->
-            <div class="col-md-6 mb-4 mb-md-0">
-              <h5 class="mb-3">Métodos de contato</h5>
-              <ul class="list-unstyled">
-                <li><i class="fas fa-map-marker-alt me-2"></i> Rua C N°65 Água Branca</li>
-                <li><i class="fab fa-instagram me-2"></i> @lebook.ofc</li>
-                <li><i class="fas fa-phone me-2"></i> (31) 3392-1187</li>
-                <li><i class="far fa-envelope me-2"></i> lebook@hotmail.com</li>
-              </ul>
+            <div class="row">
+                <!-- Contatos -->
+                <div class="col-md-6 mb-4 mb-md-0">
+                    <h5 class="mb-3">Métodos de contato</h5>
+                    <ul class="list-unstyled">
+                        <li><i class="fas fa-map-marker-alt me-2"></i> Rua C N°65 Água Branca</li>
+                        <li><i class="fab fa-instagram me-2"></i> @lebook.ofc</li>
+                        <li><i class="fas fa-phone me-2"></i> (31) 3392-1187</li>
+                        <li><i class="far fa-envelope me-2"></i> lebook@hotmail.com</li>
+                    </ul>
+                </div>
+
+                <!-- Outros -->
+                <div class="col-md-6">
+                    <h5 class="mb-3">Outros links úteis</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="#" class="text-white">Quem somos</a></li>
+                        <li><a href="#" class="text-white">Ajuda</a></li>
+                        <li><a href="#" class="text-white">Dúvidas frequentes</a></li>
+                        <li><a href="#" class="text-white">Termos de privacidade</a></li>
+                    </ul>
+                </div>
             </div>
-    
-            <!-- Outros -->
-            <div class="col-md-6">
-              <h5 class="mb-3">Outros links úteis</h5>
-              <ul class="list-unstyled">
-                <li><a href="#" class="text-white">Quem somos</a></li>
-                <li><a href="#" class="text-white">Ajuda</a></li>
-                <li><a href="#" class="text-white">Dúvidas frequentes</a></li>
-                <li><a href="#" class="text-white">Termos de privacidade</a></li>
-              </ul>
-            </div>
-          </div>
         </div>
+    </footer>
 
     <!--Referência do script.js-->
     <script src="script.js"></script>
@@ -129,6 +117,9 @@
     <script src="https://kit.fontawesome.com/86c1062090.js" crossorigin="anonymous"></script>
 
     <script src="scripts/apiinfo.js" crossorigin="anonymous"></script>
+
+    <script src="scripts/cadastro.js" crossorigin="anonymous"></script>
+
 
 </body>
 
