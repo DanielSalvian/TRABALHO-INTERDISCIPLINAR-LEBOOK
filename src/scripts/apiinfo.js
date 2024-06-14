@@ -21,7 +21,7 @@ document.addEventListener("DOMContentLoaded", consumirAPI);
 
             Object.keys(data).forEach(key => {
                 const card = document.createElement('div');
-                card.className = 'card col-4';
+                card.className = 'col-lg-2 col-sm-4 m-2 d-flex justify-content-center';
 
                 const cardBody = document.createElement('div');
                 cardBody.className = 'card-body';
@@ -32,8 +32,9 @@ document.addEventListener("DOMContentLoaded", consumirAPI);
 
                 const cardImage = document.createElement('img');
                 cardImage.className = 'card-img-top';
-                cardImage.src = 'livro.jpg';
-                cardImage.style.height = '500px';
+                cardImage.src = `data:image/png;base64,${data[key].capa}`;
+                cardImage.style.height = '280px';
+                cardImage.style.width = '200px';
                 
 
                 const cardContent1 = document.createElement('p');
@@ -68,12 +69,17 @@ document.addEventListener("DOMContentLoaded", consumirAPI);
 
                 cardBody.appendChild(cardTitle);
                 cardBody.appendChild(cardImage);
-                cardBody.appendChild(cardButton);
-                card.appendChild(cardBody);
+
+                const linkLivro = document.createElement('a');
+                linkLivro.href=`telaLivro.html?id=${data[key].id_livro}`;
+
+                linkLivro.appendChild(cardBody);
+                card.appendChild(linkLivro);
                 
                 apiDataDiv.appendChild(card);
             });
         }
+
 
         document.addEventListener("DOMContentLoaded", consumirAP);
 
@@ -98,11 +104,9 @@ document.addEventListener("DOMContentLoaded", consumirAPI);
                 const key = Object.keys(data)[i]; 
         
                 const card = document.createElement('div');
-                card.className = 'card col-2';
+                card.className = 'col-lg-2 col-sm-4 m-2 d-flex justify-content-center';
 
-                card.style.marginLeft = '50px';
-                card.style.marginTop = '30px';
-                card.style.marginBottom = '30px';
+
 
                 const cardBody = document.createElement('div');
                 cardBody.className = 'card-body';
@@ -114,8 +118,9 @@ document.addEventListener("DOMContentLoaded", consumirAPI);
 
                 const cardImage = document.createElement('img');
                 cardImage.className = 'card-img-top';
-                cardImage.src = 'livro.jpg';
-                cardImage.style.height = '200px';
+                cardImage.src = `data:image/png;base64,${data[key].capa}`;
+                cardImage.style.height = '280px';
+                cardImage.style.width = '200px';
                 
 
                 const cardContent1 = document.createElement('p');
@@ -134,13 +139,16 @@ document.addEventListener("DOMContentLoaded", consumirAPI);
                 cardContent4.className = 'card-text';
                 cardContent4.innerText = `Resumo: ${data[key].resumo}`;
         
-
+                const linkLivro = document.createElement('a');
+                linkLivro.href=`telaLivro.html?id=${data[key].id_livro}`;
         
                 cardBody.appendChild(cardTitle);
                 cardBody.appendChild(cardImage);
 
-                card.appendChild(cardBody);
-                        
+                linkLivro.appendChild(cardBody);
+                card.appendChild(linkLivro);
+                
+                
                 apiDataDiv.appendChild(card);
             }
         }
@@ -186,7 +194,7 @@ document.addEventListener("DOMContentLoaded", consumirAPI);
         
                     const cardImage = document.createElement('img');
                     cardImage.className = 'card-img-top';
-                    cardImage.src = 'livro.jpg';
+                    cardImage.src = `data:image/png;base64,${data[key].capa}`;
                     cardImage.style.height = '350px';
         
                     const cardContent1 = document.createElement('p');
@@ -211,8 +219,13 @@ document.addEventListener("DOMContentLoaded", consumirAPI);
                     cardBody.appendChild(cardContent2);
                     cardBody.appendChild(cardContent3);
                     cardBody.appendChild(cardContent4);
-                    card.appendChild(cardBody);
         
+                    const linkLivro = document.createElement('a');
+                    linkLivro.href=`telaLivro.html?id=${data[key].id_livro}`;
+    
+                    linkLivro.appendChild(cardBody);
+                    card.appendChild(linkLivro);
+
                     apiDataDiv.appendChild(card);
                 });
             }

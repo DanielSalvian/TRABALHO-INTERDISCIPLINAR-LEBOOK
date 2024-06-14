@@ -1,0 +1,12 @@
+.capa {
+    width: 100%; /* Largura da imagem igual à largura do container */
+    height: 100%; /* Altura da imagem igual à altura do container */
+    object-fit: cover; /* Faz com que a imagem preencha o container mantendo a proporção */
+    position: absolute; /* Permite posicionar a imagem dentro do container */
+    top: 0; /* Alinha a imagem no topo do container */
+    left: 0;
+}
+
+.cont{
+    overflow: hidden; 
+}

@@ -8,7 +8,7 @@ function atualizarCapa() {
 
         converterParaBase64(file, (base64Image) => {
             // console.log(base64Image);
-            imagem = "data:image/png;base64," + base64Image
+            imagem = "data:image/png;base64," + base64Image//
             document.getElementById("capaLivro").src = `${imagem}`
         });
     });
@@ -41,7 +41,8 @@ function converterParaBase64(file, callback) {
 }
 
 function adicionarLivro() {
-    const capa = document.getElementById("capaLivro").src;
+    let capa = document.getElementById("capaLivro").src
+    capa = capa.replace(/^data:image\/(png|jpg|jpeg);base64,/, '');
 
     const nome = document.getElementById('nomeLivro').value;
     const autor = document.getElementById('autorLivro').value;
@@ -59,29 +60,17 @@ function adicionarLivro() {
           nome: nome,
           autor: autor,
           genero: genero,
-          resumo: resumo
+          resumo: resumo,
+          capa: capa
         })
       })
         .then(response => response.json())
         .then(data => {
+          alert(data.message);
+          window.location.href="telaAdicionarLivro.html"
         })
         .catch(error => console.error('Erro ao enviar os dados:', error));
 
-        fetch('https://phaccess.vercel.app/capa', {
-            method: 'POST',
-            headers: {
-              'Content-Type': 'application/json'
-            },
-            body: JSON.stringify({
-              valor: capa
-            })
-          })
-            .then(response => response.json())
-            .then(data => {
-              alert("Livro Inserido");
-              window.location.href="telaAdicionarLivro.html"
-            })
-            .catch(error => console.error('Erro ao enviar os dados:', error));
     } else {
       alert("Preencha corretamente todos os campos!");
     }
