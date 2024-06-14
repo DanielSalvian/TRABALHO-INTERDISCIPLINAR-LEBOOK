@@ -170,6 +170,78 @@ document.addEventListener("DOMContentLoaded", consumirAPI);
                 });
         }
        
+        //tela deslogado
+        document.addEventListener("DOMContentLoaded", consumirAP);
+
+        function consumirAP() { //tela inicial des
+            const url = 'https://phaccess.vercel.app/';
+
+            fetch(url)
+                .then(response => response.json())
+                .then(data => {
+                    mostrarDado(data);
+                })
+                .catch(error => {
+                    console.error('Erro ao consumir a API:', error);
+                });
+        }
+       
+        function mostrarDado(data) {
+            const apiDataDiv = document.getElementById('api-datasDES');
+            apiDataDiv.innerHTML = ''; 
+        
+            for (let i = 0; i < 3; i++) {
+                const key = Object.keys(data)[i]; 
+        
+                const card = document.createElement('div');
+                card.className = 'col-lg-2 col-sm-4 m-2 d-flex justify-content-center';
+
+
+
+                const cardBody = document.createElement('div');
+                cardBody.className = 'card-body';
+
+
+                const cardTitle = document.createElement('h5');
+                cardTitle.className = 'card-title';
+                cardTitle.innerText = data[key].nome;
+
+                const cardImage = document.createElement('img');
+                cardImage.className = 'card-img-top';
+                cardImage.src = `data:image/png;base64,${data[key].capa}`;
+                cardImage.style.height = '280px';
+                cardImage.style.width = '200px';
+                
+
+                const cardContent1 = document.createElement('p');
+                cardContent1.className = 'card-text';
+                cardContent1.innerText = `ID do Livro: ${data[key].id_livro}`;
+
+                const cardContent2 = document.createElement('p');
+                cardContent2.className = 'card-text';
+                cardContent2.innerText = `Autor: ${data[key].autor}`;
+
+                const cardContent3 = document.createElement('p');
+                cardContent3.className = 'card-text';
+                cardContent3.innerText = `Gênero: ${data[key].genero}`;
+
+                const cardContent4 = document.createElement('p');
+                cardContent4.className = 'card-text';
+                cardContent4.innerText = `Resumo: ${data[key].resumo}`;
+        
+                const linkLivro = document.createElement('a');
+                linkLivro.href=`telaDeLogin.html`;
+        
+                cardBody.appendChild(cardTitle);
+                cardBody.appendChild(cardImage);
+
+                linkLivro.appendChild(cardBody);
+                card.appendChild(linkLivro);
+                
+                
+                apiDataDiv.appendChild(card);
+            }
+        }
       
 
         function mostrarDadosPerfil() { //telaperfil
