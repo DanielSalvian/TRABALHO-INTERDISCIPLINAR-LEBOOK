@@ -1,8 +1,7 @@
-console.log("data-0");
+
 recomendacaoLivro() ;
 
 function recomendacaoLivro() {
-    console.log("data");
     fetch('https://phaccess.vercel.app/livro?id=1', {
         method: 'GET',
         headers: {
@@ -11,7 +10,6 @@ function recomendacaoLivro() {
     })
         .then(response => response.json())
         .then(data => {
-            console.log(data);
             let livro = `<div class="col-lg-3 col-sm-8 m-2">
         <div class=""><img id="capaLivro" src="livro.jpg" style="width: 300px; height: 380px"
             class="sombras-nav borda-livro capa-livro"></div>
