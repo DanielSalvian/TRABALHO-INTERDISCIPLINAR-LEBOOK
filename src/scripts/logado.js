@@ -43,3 +43,4 @@ function verificarLogin(){
         console.log("logado")
     }
 }
+

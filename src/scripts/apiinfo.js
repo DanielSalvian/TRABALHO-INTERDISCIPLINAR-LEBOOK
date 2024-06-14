@@ -63,7 +63,8 @@ document.addEventListener("DOMContentLoaded", consumirAPI);
                     addItem(data[key].nome, data[key].id_livro, data[key].autor, data[key].genero, data[key].resumo);
         
                     
-                    window.location.href = 'telaLivro.html';
+                    const livroId = data[key].id_livro;
+    window.location.href = `telaLivro.html?id=${livroId}`;
                 });
 
                 cardBody.appendChild(cardTitle);
@@ -74,6 +75,8 @@ document.addEventListener("DOMContentLoaded", consumirAPI);
                 apiDataDiv.appendChild(card);
             });
         }
+
+        
 
         document.addEventListener("DOMContentLoaded", consumirAP);
 
