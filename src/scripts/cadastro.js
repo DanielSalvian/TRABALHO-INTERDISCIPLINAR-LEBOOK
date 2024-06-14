@@ -67,13 +67,32 @@ function login() {
   }
 }
 
-function mostrard() {
-  const usuarioLogado = localStorage.getItem('LoginAtual');
-  if (usuarioLogado) {
-      const usuario = JSON.parse(usuarioLogado);
-      const inputEmail = document.getElementById('emailUsuario');
-      if (inputEmail) {
-          inputEmail.value = usuario.email;
+
+function carregarDadosUsuario() {
+  const usuario = JSON.parse(localStorage.getItem('LoginAtual'));
+
+  if (usuario) {
+    fetch('https://phaccess.vercel.app/usuarioLivro', {
+      method: 'GET',
+      headers: {
+        'Content-Type': 'application/json'
       }
-  }
-}
+    })
+      .then(response => response.json())
+      .then(data => {
+        let user = data.find(user => user.email === usuario.email && user.senha === usuario.senha);
+        if (user) {
+          const userInfoDiv = document.getElementById('userInfo');
+          userInfoDiv.innerHTML = `
+            <h2>Informações do Usuário</h2>
+            <p><strong>Nome:</strong> ${user.nome}</p>
+            <p><strong>Email:</strong> ${user.email}</p>
+            <p><strong>CPF:</strong> ${user.cpf}</p>
+          `;
+        } 
+})}}
+
+window.onload = carregarDadosUsuario;
+
+
+
