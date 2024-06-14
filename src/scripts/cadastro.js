@@ -20,10 +20,45 @@ function enviarDados() {
       .then(response => response.json())
       .then(data => {
         alert(data.message);
-        window.location.href='telaLogado.html'
+        window.location.href = 'telaLogado.html'
       })
       .catch(error => console.error('Erro ao enviar os dados:', error));
   } else {
     alert("Preencha corretamente todos os campos!");
+  }
+}
+
+function login() {
+  const email = document.getElementById('emailLogin').value;
+  const senha = document.getElementById('senhaLogin').value;
+  let condicao = false;
+
+  if (email && senha) {
+    fetch('https://phaccess.vercel.app/usuarioLivro', {
+      method: 'GET',
+      headers: {
+        'Content-Type': 'application/json'
+      }
+    })
+      .then(response => response.json())
+      .then(data => {
+        for (i = 0; i < data.length - 1; i++) {
+          if (email == data[i].email && senha == data[i].senha) {
+            condicao = true;
+          } 
+        }
+        if (condicao) {
+          const usuario = {
+            status: "logado",
+            nome: data[i].nome,
+            email: data[i].email
+          };
+          localStorage.setItem('LoginAtual', JSON.stringify(usuario));
+          window.location.href = 'telaLogado.html'
+        } else {
+          alert("Dados inválidos... Preencha novamente.");
+        }
+      })
+      .catch(error => console.error('Erro ao encontrar os dados:', error));
   }
 }
