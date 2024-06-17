@@ -69,30 +69,52 @@ function login() {
 
 
 function carregarDadosUsuario() {
-  const usuario = JSON.parse(localStorage.getItem('LoginAtual'));
+  const usuarioLogado = JSON.parse(localStorage.getItem('LoginAtual'));
 
-  if (usuario) {
+  if (usuarioLogado) {
     fetch('https://phaccess.vercel.app/usuarioLivro', {
       method: 'GET',
       headers: {
         'Content-Type': 'application/json'
       }
     })
-      .then(response => response.json())
+      .then(response => {
+        
+        return response.json();
+      })
       .then(data => {
-        let user = data.find(user => user.email === usuario.email && user.senha === usuario.senha);
-        if (user) {
+        console.log('Dados recebidos da API:', data);
+        console.log('Usuário logado:', usuarioLogado);
+        
+       
+        const usuario = data.find(user => user.email === usuarioLogado.email && user.senha === usuarioLogado.senha);
+        
+
+          
           const userInfoDiv = document.getElementById('userInfo');
-          userInfoDiv.innerHTML = `
-            <h2>Informações do Usuário</h2>
-            <p><strong>Nome:</strong> ${user.nome}</p>
-            <p><strong>Email:</strong> ${user.email}</p>
-            <p><strong>CPF:</strong> ${user.cpf}</p>
-          `;
-        } 
-})}}
+          if (userInfoDiv) {
+            userInfoDiv.innerHTML = `
+              <h2>Informações do Usuário</h2>
+              <p><strong>Nome:</strong> ${usuarioLogado.nome}</p>
+              <p><strong>Email:</strong> ${usuarioLogado.email}</p>
+             
+            `;
+          }
+       
+      })
+      .catch(error => {
+        console.error('Erro ao buscar dados do usuário:', error);
+      });
+  } else {
+    console.error('Nenhum usuário logado encontrado no localStorage.');
+  }
+}
 
 window.onload = carregarDadosUsuario;
+
+
+
+
 
 
 
