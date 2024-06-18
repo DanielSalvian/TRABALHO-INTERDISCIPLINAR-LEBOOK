@@ -1,22 +1,22 @@
 .bg-padrao {
-  background-color: #5E4141;
+  background-color: #57CC99;
 }
 
 .bg-padrao-claro {
-  background-color: #6D5454;
+  background-color: #80ED99;
 }
 
 .bg-linha{
-  background-color: #5e4141a8;
+  background-color: #57CC99;
 }
 
 
 .ln-topo {
-  border-top: 5px solid #5e4141a8;
+  border-top: 5px solid #57CC99;
 }
 
 .ln-baixo{
-  border-bottom: 5px solid #5e4141a8;
+  border-bottom: 5px solid #57CC99;
 }
 
 
@@ -41,16 +41,16 @@
 
 .btn-padrao{
   color: white;
-  background-color: #5E4141;
-  border-color: #5E4141;
+  background-color: #57CC99;
+  border-color: #57CC99;
   border-style: solid;
   padding: 3px 10px 3px 10px;
 }
 
 .btn-padrao:hover{
   color: rgba(255, 255, 255, 0.966);
-  background-color: #5e4141ee;
-  border-color: #5E4141;
+  background-color: #80ED99;
+  border-color: #80ED99;
   border-style: solid;
 
   transition: 0.3s;
@@ -96,7 +96,7 @@
 .quadrado {
   width: 100px;
   height: 100px;
-  background-color:#5E4141;
+  background-color:#57CC99;
   border-radius: 15px; 
   position: absolute;
   opacity: 0.8; 
@@ -134,7 +134,7 @@
   width: 90%;
   max-width: 1200px; 
   height: 400px; 
-  background-color: #5E4141;
+  background-color: #57CC99;
   border-radius: 20px;
   display: flex;
   justify-content: center;
@@ -168,5 +168,5 @@
 
 .arrow-icon {
   font-size: 70px; 
-  color: #5E4141;
+  color: #57CC99;
 }

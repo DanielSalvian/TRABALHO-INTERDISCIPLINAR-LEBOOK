@@ -1,0 +1,214 @@
+*{
+    background-color: #C7F9CC;
+}
+
+
+.content{
+    height: 700px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    padding-left: 300px;
+    
+}
+
+.navbar-nav .nav-link {
+    color:#57CC99!important;
+    font-size: 20px;
+    font-weight: bold;
+  }
+  
+
+.imagem{
+    position: relative;
+    right: 100%;
+}
+.img-cadastro{
+    width: 140%;
+    padding-top: 170px;
+}
+.parte2{
+    width: 600px;
+    height: 600px;
+    align-content: center;
+}
+.logo-perfil{
+    font-size: 70px;
+    color:#57CC99;
+    font-family: "Leckerli One", cursive;
+    font-weight: 400;
+    font-style: normal;
+    margin-bottom: 40px;
+    margin-left: 200px;
+}
+#nomeCadastro,#cpfCadastro, #senhaCadastro,#emailCadastro{
+margin-bottom: 20px;
+font-size: 24px;
+border: 2px solid grey;
+}
+.cadastro{
+    font-size: 25px;
+    margin-left: 200px;
+    padding-top: 15px ;
+    padding-bottom: 15px;
+    padding-left: 40px;
+    padding-right: 40px;
+    border-radius: 50px;
+    border: none;
+    background-color: #57CC99;
+    margin-bottom: 20px;
+}
+
+
+
+.contato{
+    font-size: 30px;
+    text-decoration: none;
+    margin-left: 40px;
+    background-color: #57CC99;
+    padding: 20px;
+    border-radius: 60px;
+    
+}
+.contatos{
+    padding-top: 80px;
+}
+
+
+@media screen and (max-width: 1441px) {
+
+    .imagem{
+        right: 60%;
+        margin-bottom: 110px;
+    }
+    .contatos{
+        padding-top: 30px;
+    }
+}
+
+@media screen and (max-width: 1281px) {
+    .logo-perfil{
+        font-size: 80px;
+        margin-left: 100px;
+    }
+
+    .cadastro{
+        font-size: 30px;
+        margin-left: 120px;
+    }
+
+    .imagem{
+        right: 70%;
+        margin-bottom: 50px;
+    }
+    .parte2{
+        padding-right: 100px;
+    }
+
+}
+
+@media screen and (max-width: 835px) {
+    .content{
+        justify-content: center;
+        flex-direction:column-reverse;
+        padding-left: 300px;
+    
+    }
+    .contatos{
+        display: none;
+    }
+
+    .parte1{
+        position: relative;
+        top:20%;
+        height: 0px;
+       
+    }
+    .parte2{
+        height: 400px;
+        margin-top: 0px;
+        align-content: center;
+        position: relative;
+        right: 20%;
+    }
+    .imagem{
+        position: relative;
+        right: 30%;
+        top: 30%;
+    }
+    .img-cadastro{
+        width: 100%;
+        padding-top: 0px;
+        margin-top: 70px;
+    }
+   
+    @media screen and (max-width: 601px) {
+        .content{
+            padding-top: 0px;
+            margin-top: -100px;
+            padding-left: 200px;
+        }
+    }
+
+    .login{
+        font-size: 30px;
+        margin-left: 180px;
+       
+    }
+
+    .logo-perfil{
+        font-size: 90px;
+        margin-left: 120px;
+    }
+
+
+        .img-cadastro{
+            width: 80%;
+            padding-top: 50px;
+        }
+
+        .imagem{
+            right: 30%;
+            top: 30%;
+        }
+
+        @media screen and (max-width: 415px) {
+            .content{
+                width: 430px;
+                padding-left: 0px;
+            }
+
+            .logo-perfil{
+                font-size: 70px;
+                margin-left: 250px;
+            }
+
+            #senhaCadastro,#emailCadastro,#cpfCadastro,#nomeCadastro{
+                margin-left: 200px;
+                width: 350px;
+                }
+
+            .input-title{
+                margin-left: 200px;
+            }
+
+            .cadastro{
+                margin-left: 280px;
+            }
+
+            .imagem{
+                position: relative;
+                right: 30%;
+                top: 30%;
+            }
+            .img-cadastro{
+                
+                margin-left: 150px;
+                padding-left: 50px;
+                margin-top: 50px;
+            }
+
+
+        }
+}
