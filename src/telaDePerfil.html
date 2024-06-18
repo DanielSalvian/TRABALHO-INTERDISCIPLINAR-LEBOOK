@@ -2,119 +2,170 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>LêBook: Perfil</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>LêBook: Perfil</title>
+  <link rel="stylesheet" href="style.css">
+  <!-- Referência do Bootstrap (CSS) -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Fontes GoogleFonts -->
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap');
 
-    <!--Referência do Style.css-->
-    <link rel="stylesheet" href="style.css">
-    <!--Referência do Bootstrap (CSS)-->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-    <!--Fontes GoogleFonts-->
-    <style>
-        @import url('https://fonts.googleapis.com/css2?family=Leckerli+One&display=swap');
-    </style>
+    body {
+      font-family: 'Roboto', sans-serif;
+      background-color: #f5f5f5;
+      margin: 0;
+      padding: 0;
+    }
+
+    .fonte-logo {
+      font-family: 'Leckerli One', cursive;
+    }
+
+    .bg-padrao {
+      background-color: #33ac98;
+    }
+
+    .sombras-nav {
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    }
+
+    .profile-container {
+      max-width: 500px;
+      margin: 50px auto;
+      background-color: #fff;
+      border-radius: 15px;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+      padding: 30px;
+      text-align: center;
+    }
+
+    .profile-img {
+      width: 120px;
+      height: 120px;
+      border-radius: 50%;
+      margin-bottom: 20px;
+      object-fit: cover;
+      border: 3px solid #33ac98;
+    }
+
+    .profile-info h3 {
+      font-size: 1.5rem;
+      margin-bottom: 10px;
+      color: #333;
+    }
+
+    .profile-info p {
+      font-size: 1rem;
+      color: #666;
+      margin-bottom: 5px;
+    }
+
+    .profile-info .btn-padrao {
+      background-color: #387dc7;
+      ;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      font-size: 1rem;
+      border-radius: 5px;
+      margin-top: 20px;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+
+    .profile-info .btn-padrao:hover {
+      background-color: #2d9a82;
+    }
+
+    footer {
+      background-color: #33ac98;
+      color: white;
+      padding: 20px 0;
+      position: fixed;
+      width: 100%;
+      bottom: 0;
+      box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.2);
+      text-align: center;
+    }
+
+    footer ul {
+      list-style-type: none;
+      padding: 0;
+    }
+
+    footer ul li {
+      margin: 5px 0;
+    }
+
+    footer ul li a {
+      color: white;
+      text-decoration: none;
+    }
+
+    footer ul li a:hover {
+      text-decoration: underline;
+    }
+  </style>
 </head>
 
-<body onload="carregarDadosUsuario()">
+<body onload="exibirInfoUsuario()">
 
-    <header>
-        <nav class="navbar navbar-expand-lg sombras-nav bg-padrao">
-            <div class="container-fluid">
-                <a class="navbar-brand fonte-logo fs-1 text-white" href="telaLogado.html">LêBook</a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                    data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false"
-                    aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse justify-content-end" id="navbarNavAltMarkup">
-                    <div class="navbar-nav nav-underline pe-5">
-                        <a class="nav-link text-white" href="telaLogado.html">Home</a>
-                        <a class="nav-link text-white" href="telaDeAcervo.html">Acervo</a>
-                        <a class="nav-link text-white" href="telaDosReservados.html">Reservados</a>
-                        <a class="nav-link text-white active" href="telaDePerfil.html" aria-current="page">Perfil</a>
-                    </div>
-                </div>
-            </div>
-        </nav>
-    </header>
-
-    <main class="p-3">
-        <div class="row justify-content-left d-flex mt-2 mb-2">
-
-            <div class="col-4 row justify-content-center d-flex">
-                <div class="col-7 d-flex justify-content-center mb-2 mt-2">
-                    <img src="estilos/Imagens/usuariopadrão.webp" class="rounded-pill" style="width: 250px; height: 240px;">
-                </div>
-            </div>
-
-            <div class="col-4 row justify-content-left d-flex">
-
-                
-
-                
-                <div id="userInfo"></div>
-
-                
-                <!--
-                <div class="col-12 d-flex flex-column flex-md-row align-items-center justify-content-left pb-2 mb-2 mt-2">
-                    <text class="mb-2 mb-md-0 mr-md-2">Livros reservados:</text>
-                    <input type="text" class="form-control rounded-pill" placeholder="Quantidade" style="width: 100%; max-width: 200px; height: 30px;">
-                </div>-->
-
-                <div class="col-8 d-flex justify-content-center pb-2 mb-2 mt-2">
-                    <a type="button" onclick="deslogar()" class="rounded-pill btn-padrao" style="max-width: 200px; height: 30px;">Deslogar</a>
-                </div>
-
-            </div>
+  <header>
+    <nav class="navbar navbar-expand-lg sombras-nav bg-padrao p-3">
+      <div class="container-fluid">
+        <a class="navbar-brand fonte-logo fs-1 text-white" href="telaLogado.html">LêBook</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
+          aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse justify-content-end" id="navbarNavAltMarkup">
+          <div class="navbar-nav">
+            <a class="nav-link text-white" href="telaLogado.html">Home</a>
+            <a class="nav-link text-white" href="telaDeAcervo.html">Acervo</a>
+            <a class="nav-link text-white" href="telaDosReservados.html">Reservados</a>
+            <a class="nav-link text-white active" href="telaDePerfil.html">Perfil</a>
+          </div>
         </div>
-        <div class="col-12 bg-linha rounded-pill" style="width: 1620px; height: 5px;"></div>
+      </div>
+    </nav>
+  </header>
 
-    </main>
+  <main class="container mt-5 mb-5">
+    <div class="profile-container">
+      <img src="estilos/Imagens/usuariopadrão.webp" class="profile-img" alt="User Profile Picture">
+      <div class="profile-info">
+        <h3>Perfil do Usuário</h3>
+        <p><strong>Nome:</strong> <span id="user-name">Usuário</span></p>
+        <p><strong>Livros Reservados:</strong> <span id="user-books">0</span></p>
+        <button type="button" onclick="deslogar()" class="btn btn-padrao">Deslogar</button>
+      </div>
+    </div>
+  </main>
 
-    <footer class="sombras-footer bg-padrao text-white">
-        <div class="container py-5">
-            <div class="row">
-                <!-- Contatos -->
-                <div class="col-md-6 mb-4 mb-md-0">
-                    <h5 class="mb-3">Métodos de contato</h5>
-                    <ul class="list-unstyled">
-                        <li><i class="fas fa-map-marker-alt me-2"></i> Rua C N°65 Água Branca</li>
-                        <li><i class="fab fa-instagram me-2"></i> @lebook.ofc</li>
-                        <li><i class="fas fa-phone me-2"></i> (31) 3392-1187</li>
-                        <li><i class="far fa-envelope me-2"></i> lebook@hotmail.com</li>
-                    </ul>
-                </div>
+  <footer>
+    <div class="container">
+      <ul>
+        <li><i class="fas fa-map-marker-alt me-2"></i> Rua C N°65 Água Branca</li>
+        <li><i class="fab fa-instagram me-2"></i> @lebook.ofc</li>
+        <li><i class="fas fa-phone me-2"></i> (31) 3392-1187</li>
+        <li><i class="far fa-envelope me-2"></i> lebook@hotmail.com</li>
+      </ul>
+      <ul>
+        <li><a href="#">Quem somos</a></li>
+        <li><a href="#">Ajuda</a></li>
+        <li><a href="#">Dúvidas frequentes</a></li>
+        <li><a href="#">Termos de privacidade</a></li>
+      </ul>
+    </div>
+  </footer>
 
-                <!-- Outros -->
-                <div class="col-md-6">
-                    <h5 class="mb-3">Outros links úteis</h5>
-                    <ul class="list-unstyled">
-                        <li><a href="#" class="text-white">Quem somos</a></li>
-                        <li><a href="#" class="text-white">Ajuda</a></li>
-                        <li><a href="#" class="text-white">Dúvidas frequentes</a></li>
-                        <li><a href="#" class="text-white">Termos de privacidade</a></li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </footer>
-
-    <!--Referência do script.js-->
-    <script src="script.js"></script>
-    <!--Referência do Bootstrap (JS)-->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
-        crossorigin="anonymous"></script>
-    <!--Referência do FontAwesome-->
-    <script src="https://kit.fontawesome.com/86c1062090.js" crossorigin="anonymous"></script>
-
-    <script src="scripts/apiinfo.js" crossorigin="anonymous"></script>
-
-    <script src="scripts/cadastro.js" crossorigin="anonymous"></script>
-    <script src="scripts/telaDePerfil.js" crossorigin="anonymous"></script>
-
-
+  <script src="scripts/apiinfo.js"></script>
+  <script src="scripts/cadastro.js"></script>
+  <script src="scripts/telaDePerfil.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://kit.fontawesome.com/86c1062090.js" crossorigin="anonymous"></script>
 </body>
 
 </html>
