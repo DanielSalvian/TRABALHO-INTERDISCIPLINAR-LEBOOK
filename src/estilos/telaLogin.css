@@ -1,0 +1,215 @@
+*{
+    background-color: #C7F9CC;
+}
+
+
+.content{
+    height: 700px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    padding-left: 300px;
+    
+}
+
+.navbar-nav .nav-link {
+    color:#57CC99!important;
+    font-size: 20px;
+    font-weight: bold;
+  }
+  
+
+.imagem{
+    position: relative;
+    right: 100%;
+}
+.img-login{
+    width: 130%;
+    padding-top: 100px;
+}
+.parte2{
+    height: 600px;
+    align-content: center;
+}
+.logo-perfil{
+    font-size: 70px;
+    color:#57CC99;
+    font-family: "Leckerli One", cursive;
+    font-weight: 400;
+    font-style: normal;
+    margin-bottom: 40px;
+    margin-left: 120px;
+}
+#senhaLogin,#emailLogin{
+margin-bottom: 40px;
+font-size: 24px;
+border: 2px solid grey;
+}
+
+.login{
+    font-size: 25px;
+    margin-left: 160px;
+    padding-top: 15px ;
+    padding-bottom: 15px;
+    padding-left: 40px;
+    padding-right: 40px;
+    border-radius: 50px;
+    border: none;
+    background-color: #57CC99;
+    margin-bottom: 20px;
+}
+
+.cadastrar{
+    font-size: 20px;  
+}
+
+.contato{
+    font-size: 30px;
+    text-decoration: none;
+    margin-left: 40px;
+    background-color: #57CC99;
+    padding: 20px;
+    border-radius: 60px;
+    
+}
+.contatos{
+    padding-top: 80px;
+}
+
+@media screen and (max-width: 1441px) {
+
+    .imagem{
+        right: 60%;
+    }
+    .contatos{
+        padding-top: 30px;
+    }
+}
+
+@media screen and (max-width: 1281px) {
+
+    .imagem{
+        right: 70%;
+    }
+    .parte2{
+        padding-right: 100px;
+    }
+}
+
+@media screen and (max-width: 835px) {
+    .content{
+        justify-content: center;
+        flex-direction:column-reverse;
+        padding-left: 300px;
+    
+    }
+    .contatos{
+        display: none;
+    }
+
+    .parte1{
+        position: relative;
+        top:20%;
+        height: 0px;
+       
+    }
+    .parte2{
+        height: 400px;
+        margin-top: 0px;
+        align-content: center;
+        position: relative;
+        right: 20%;
+    }
+    .imagem{
+        position: relative;
+        right: 30%;
+        top: 30%;
+    }
+    .img-login{
+        width: 100%;
+        padding-top: 0px;
+    }
+   
+    @media screen and (max-width: 601px) {
+        .content{
+            padding-top: 0px;
+            margin-top: -100px;
+            padding-left: 200px;
+        }
+    }
+
+    .login{
+        font-size: 30px;
+        margin-left: 180px;
+       
+    }
+
+    .logo-perfil{
+        font-size: 90px;
+        margin-left: 120px;
+    }
+
+    #senhaLogin,#emailLogin{
+        font-size: 24px;
+        width: 500px;
+        }
+
+        .cadastrar{
+            font-size: 22px;  
+          
+        }
+
+        .img-login{
+            width: 80%;
+            padding-top: 20px;
+        }
+
+        .imagem{
+            right: 30%;
+            top: 30%;
+        }
+
+        @media screen and (max-width: 415px) {
+            .content{
+                width: 440px;
+                padding-left: 0px;
+            }
+
+            .logo-perfil{
+                font-size: 70px;
+                margin-left: 250px;
+            }
+
+            #senhaLogin,#emailLogin{
+                margin-left: 200px;
+                width: 350px;
+                }
+
+            .email-title, .senha-title{
+                margin-left: 200px;
+            }
+
+            .login{
+                margin-left: 300px;
+            }
+
+            .cadastrar{
+                padding-left: 300px !important;
+                
+            }
+
+            .imagem{
+                position: relative;
+                right: 30%;
+                top: 30%;
+            }
+            .img-login{
+                width: 80%;
+                margin-left: 150px;
+                padding-left: 50px;
+            }
+
+
+        }
+}

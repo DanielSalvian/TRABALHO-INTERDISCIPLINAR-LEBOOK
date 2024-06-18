@@ -1,0 +1,144 @@
+.novos{
+    border-top: 2px solid black;
+    margin-top: 60px;
+   
+
+}
+.livros{
+    display: flex;
+    align-items: center;
+    margin-top: 100px;
+    flex-wrap: wrap;
+    gap: 30px;
+    margin-left: 300px;
+    margin-right: 300px;
+    margin-bottom: 80px;
+
+}
+
+
+.title-novos{
+    text-align: center;
+    margin-top: 20px;
+    font-size: 40px;
+    font-weight: 700;
+}
+
+.img-livro{
+    max-width: 200px;
+}
+
+.card-livro{
+    padding: 20px;
+    margin-left: 50px;
+    box-shadow: 5px 5px 5px 5px gray;
+}
+
+.title-livro{
+    text-align: center;
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.vermais{
+    padding-top:10px;
+    padding-bottom: 10px;
+    padding-left: 30px;
+    padding-right:30px ;
+    border: none;
+    background-color: #57CC99;
+    font-size: 20px;
+    font-weight: 600;
+    color: white;
+    border-radius: 100px;
+}
+
+@media screen and (max-width: 1441px) {
+    .carrossel{
+        position: relative;
+        right: 250px;
+    }
+
+    .livros{
+        margin-left: 20px;
+        margin-right: 20px;
+    
+    }
+}
+
+@media screen and (max-width: 1281px) {
+    .livros{
+        margin-left: 150px;
+    }
+}
+
+@media screen and (max-width: 835px) {
+    .carrossel{
+        position: relative;
+        right: 450px;
+        width: 1200px;
+    }
+    .livros{
+        gap: 20px;
+        margin-left: 50px;
+    }
+    .title-novos{
+        text-align: center;
+        margin-top: 20px;
+        font-size: 40px;
+        font-weight: 700;
+    }
+    .img-livro{
+        max-width: 150px;
+        margin-left: 10px;
+    }
+    .card-livro{
+        margin-left: 0px;
+    }
+    .vermais{
+        margin-left: 20px;
+    }
+}
+
+@media screen and (max-width: 601px) {
+    .carrossel{
+        right: 520px;
+        width: 1050px;
+    }
+
+    .img-livro{
+        max-width: 110px;
+        margin-left: 20px;
+    }
+    .card-livro{
+        padding: 10px;
+    }
+    .livros{
+        gap: 20px;
+        margin-left: 5px;
+    }
+    
+    .title-livro{
+        font-size: 16px;
+    }
+    
+    .vermais{
+       margin-left: 10px;
+    }
+}
+
+@media screen and (max-width: 415px) {
+    .carrossel{
+        right: 570px;
+        width: 950px;
+    }
+
+
+    .livros{
+        gap: 20px;
+        margin-left: 20px;
+    }
+    
+}
+
+
