@@ -8,7 +8,7 @@
   <!--Referência do Style.css-->
   <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="estilos/home.css">
-  
+
   <!--Referência do Bootstrap (CSS)-->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
@@ -18,7 +18,7 @@
   </style>
 </head>
 
-<body>
+<body onload="carregarLivros()">
 
   <header>
     <nav class="navbar navbar-expand-lg sombras-nav bg-padrao">
@@ -31,141 +31,53 @@
         <div class="collapse navbar-collapse justify-content-end" id="navbarNavAltMarkup">
           <div class="navbar-nav nav-underline pe-5">
             <a class="nav-link text-white active" aria-current="page" href="#">Home</a>
-            <a class="nav-link text-white" href="telaDeAcervo.html">Acervo</a>
-            <a class="nav-link text-white" href="telaDosReservados.html">Reservados</a>
+            <a class="nav-link text-white" href="telaDeLogin.html">Acervo</a>
+            <a class="nav-link text-white" href="telaDeLogin.html">Reservados</a>
             <a class="nav-link text-white" href="telaDeLogin.html">Entrar</a>
           </div>
         </div>
       </div>
     </nav>
   </header>
-<main class="content">
- <div class="carrossel">
-    <div id="carouselExample" class="carousel slide">
-      <div class="carousel-inner">
-        <div class="carousel-item active">
-          <img src="estilos/Imagens/banner.png" class="d-block w-50" alt="..." style="margin-left: 600px; margin-top: 60px;">
-        </div>
-        <div class="carousel-item">
-          <img src="..." class="d-block w-100" alt="...">
-        </div>
-        <div class="carousel-item">
-          <img src="..." class="d-block w-100" alt="...">
-        </div>
-      </div>
-      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
-        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-        <span class="visually-hidden">Previous</span>
-      </button>
-      <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
-        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-        <span class="visually-hidden">Next</span>
-      </button>
-    </div>
- </div>
- 
-  <div class="novos">
-    <h2 class="title-novos">
-      Novidades!
-    </h2>
-<div class="livros">
-    <div class="card-livro">
-      <div class="img-camp">
-      <img src="estilos/Imagens/exLivro.jpg" alt="" class="img-livro">
-      </div>
-      <h6 class="title-livro">O livro da capa verde</h6>
-      <button class="vermais">Ver Mais</button>
-    </div>
 
-    <div class="card-livro">
-      <img src="estilos/Imagens/exLivro.jpg" alt="" class="img-livro">
-      <h6 class="title-livro">O livro da capa verde</h6>
-      <button class="vermais">Ver Mais</button>
-    </div>
-
-    <div class="card-livro">
-      <img src="estilos/Imagens/exLivro.jpg" alt="" class="img-livro">
-      <h6 class="title-livro">O livro da capa verde</h6>
-      <button class="vermais">Ver Mais</button>
-    </div>
-
-    <div class="card-livro">
-      <img src="estilos/Imagens/exLivro.jpg" alt="" class="img-livro">
-      <h6 class="title-livro">O livro da capa verde</h6>
-      <button class="vermais">Ver Mais</button>
-    </div>
-
-    <div class="card-livro">
-      <img src="estilos/Imagens/exLivro.jpg" alt="" class="img-livro">
-      <h6 class="title-livro">O livro da capa verde</h6>
-      <button class="vermais">Ver Mais</button>
-    </div>
-
-    <div class="card-livro">
-      <img src="estilos/Imagens/exLivro.jpg" alt="" class="img-livro">
-      <h6 class="title-livro">O livro da capa verde</h6>
-      <button class="vermais">Ver Mais</button>
-    </div>
-
-    <div class="card-livro">
-      <img src="estilos/Imagens/exLivro.jpg" alt="" class="img-livro">
-      <h6 class="title-livro">O livro da capa verde</h6>
-      <button class="vermais">Ver Mais</button>
-    </div>
-
-    <div class="card-livro">
-      <img src="estilos/Imagens/exLivro.jpg" alt="" class="img-livro">
-      <h6 class="title-livro">O livro da capa verde</h6>
-      <button class="vermais">Ver Mais</button>
-    </div>
-
-    <div class="card-livro">
-      <img src="estilos/Imagens/exLivro.jpg" alt="" class="img-livro">
-      <h6 class="title-livro">O livro da capa verde</h6>
-      <button class="vermais">Ver Mais</button>
-    </div>
-
-    <div class="card-livro">
-      <img src="estilos/Imagens/exLivro.jpg" alt="" class="img-livro">
-      <h6 class="title-livro">O livro da capa verde</h6>
-      <button class="vermais">Ver Mais</button>
-    </div>
-    
-  </div>
-
-  
-
-
-</div>
-</main>
- <!--<main class="p-3">
-  
-    <div class="row justify-content-center d-flex mt-2 mb-2">
-
-      <div class="col-4 row justify-content-center d-flex">
-
-        <div class="background-container">
-          <img src="livro.jpg" class="quadrado">
-          <img src="estilos/Imagens/opequenoprincipe.jpg" class="quadrado">
-          <img src="estilos/Imagens/capa-a-revolucao-dos-bichos.jpg" class="quadrado">
-          <div class="text-container">
-            <p class="overlay-text">O Universo da Leitura a um clique</p>
+  <main class="content">
+    <div class="carrossel">
+      <div id="carouselExample" class="carousel slide">
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img src="estilos/Imagens/banner.png" class="d-block w-50" alt="..."
+              style="margin-left: 600px; margin-top: 60px;">
           </div>
-
+          <div class="carousel-item">
+            <img src="..." class="d-block w-100" alt="...">
+          </div>
+          <div class="carousel-item">
+            <img src="..." class="d-block w-100" alt="...">
+          </div>
         </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+    </div>
+
+    <div class="novos">
+      <h2 class="title-novos">
+        Novidades!
+      </h2>
+
+      <div class="livros" id="recomendacaoLivros">
 
       </div>
 
-  </div>
-  <div class="col-12 bg-linha rounded-pill " style="width: 100%; height: 5px;"></div>
+    </div>
+  </main>
 
- 
-  <div id="api-datasDES" class="row justify-content-center">
-
-            
-  </div>
-   
-  </main>--> 
 
   <footer class="sombras-footer bg-padrao text-white">
     <div class="container py-5">
@@ -193,16 +105,15 @@
         </div>
       </div>
     </div>
-  <!--Referência do script.js-->
-  <script src="script.js"></script>
-  <!--Referência do Bootstrap (JS)-->
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
-    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
-    crossorigin="anonymous"></script>
-  <!--Referência do FontAwesome-->
-  <script src="https://kit.fontawesome.com/86c1062090.js" crossorigin="anonymous"></script>
- <!--Referência do apiinfo.js-->
-  <script src="scripts/apiinfo.js" crossorigin="anonymous"></script>
+
+    <!--Referência do Bootstrap (JS)-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous"></script>
+    <!--Referência do FontAwesome-->
+    <script src="https://kit.fontawesome.com/86c1062090.js" crossorigin="anonymous"></script>
+    <!--Referência do apiinfo.js-->
+    <script src="scripts/telaDeslogado.js" crossorigin="anonymous"></script>
 
 </body>
 
