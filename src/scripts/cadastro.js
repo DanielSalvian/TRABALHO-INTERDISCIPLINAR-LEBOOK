@@ -79,28 +79,28 @@ function carregarDadosUsuario() {
       }
     })
       .then(response => {
-        
+
         return response.json();
       })
       .then(data => {
         console.log('Dados recebidos da API:', data);
         console.log('Usuário logado:', usuarioLogado);
-        
-       
-        const usuario = data.find(user => user.email === usuarioLogado.email && user.senha === usuarioLogado.senha);
-        
 
-          
-          const userInfoDiv = document.getElementById('userInfo');
-          if (userInfoDiv) {
-            userInfoDiv.innerHTML = `
+
+        const usuario = data.find(user => user.email === usuarioLogado.email && user.senha === usuarioLogado.senha);
+
+
+
+        const userInfoDiv = document.getElementById('userInfo');
+        if (userInfoDiv) {
+          userInfoDiv.innerHTML = `
               <h2>Informações do Usuário</h2>
               <p><strong>Nome:</strong> ${usuarioLogado.nome}</p>
               <p><strong>Email:</strong> ${usuarioLogado.email}</p>
              
             `;
-          }
-       
+        }
+
       })
       .catch(error => {
         console.error('Erro ao buscar dados do usuário:', error);
@@ -112,8 +112,27 @@ function carregarDadosUsuario() {
 
 window.onload = carregarDadosUsuario;
 
+function validarNome() {
+  const nome = document.getElementById('nomeCadastro').value;
 
+  if (!isNaN(nome)) {
+    alert("Nome não pode conter números!");
+  }
+}
 
+function validarCPF() {
+  const cpf = document.getElementById('cpfCadastro').value;
+
+  if (isNaN(cpf)) {
+    alert("CPF contém apenas números!");
+  }
+}
+
+function validarEmail() {
+  const email = document.getElementById('emailCadastro').value;
+
+  
+}
 
 
 
