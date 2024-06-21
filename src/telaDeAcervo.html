@@ -23,7 +23,7 @@
    </style>
 </head>
 
-<body>
+<body onload="mostrarLivros()">
 
    <header>
       <nav class="navbar navbar-expand-lg sombras-nav bg-padrao">
@@ -57,96 +57,12 @@
          <button class="value">Estudos</button>
        </div>
 
-       <div class="livros-acervo">
-         
-         <div class="card-livro">
-            <img src="estilos/Imagens/exLivro.jpg" alt="" class="img-livro">
-            <h6 class="title-livro">O livro da capa verde</h6>
-            <button class="vermais">Ver Mais</button>
-          </div>
+       <div class="livros-acervo" id="galeriaLivros">
 
-          <div class="card-livro">
-            <img src="estilos/Imagens/exLivro.jpg" alt="" class="img-livro">
-            <h6 class="title-livro">O livro da capa verde</h6>
-            <button class="vermais">Ver Mais</button>
-          </div>
-
-          <div class="card-livro">
-            <img src="estilos/Imagens/exLivro.jpg" alt="" class="img-livro">
-            <h6 class="title-livro">O livro da capa verde</h6>
-            <button class="vermais">Ver Mais</button>
-          </div>
-
-          <div class="card-livro">
-            <img src="estilos/Imagens/exLivro.jpg" alt="" class="img-livro">
-            <h6 class="title-livro">O livro da capa verde</h6>
-            <button class="vermais">Ver Mais</button>
-          </div>
-
-          <div class="card-livro">
-            <img src="estilos/Imagens/exLivro.jpg" alt="" class="img-livro">
-            <h6 class="title-livro">O livro da capa verde</h6>
-            <button class="vermais">Ver Mais</button>
-          </div>
-
-          <div class="card-livro">
-            <img src="estilos/Imagens/exLivro.jpg" alt="" class="img-livro">
-            <h6 class="title-livro">O livro da capa verde</h6>
-            <button class="vermais">Ver Mais</button>
-          </div>
-
-
-          <div class="card-livro">
-            <img src="estilos/Imagens/exLivro.jpg" alt="" class="img-livro">
-            <h6 class="title-livro">O livro da capa verde</h6>
-            <button class="vermais">Ver Mais</button>
-          </div>
-
-          <div class="card-livro">
-            <img src="estilos/Imagens/exLivro.jpg" alt="" class="img-livro">
-            <h6 class="title-livro">O livro da capa verde</h6>
-            <button class="vermais">Ver Mais</button>
-          </div>
 
        </div>
    </main>
-   <!--<main class="p-3">
-      <div id="opcoesAcervo" class="row justify-content-left d-flex mt-2 mb-2">
-         <div class="col-4 row justify-content-center d-flex">
-            <div class="col-7 d-flex justify-content-center pb-2 mb-2 mt-2">
-               <div class="dropdown">
-                  <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown"
-                     aria-expanded="false">
-                     Selecionar o gênero
-                  </button>
-                  <ul class="dropdown-menu dropdown-menu-dark">
-                     <li><a class="dropdown-item active" href="#">Fantasia</a></li>
-                     <li><a class="dropdown-item" href="#">Aventura</a></li>
-                     <li><a class="dropdown-item" href="#">Romance</a></li>
-                     <li>
-                        <hr class="dropdown-divider">
-                     </li>
-                     <li><a class="dropdown-item" href="#">Todos</a></li>
-                  </ul>
-               </div>
-            </div>
-         </div>
 
-
-      </div>
-
-       inutilizado
-      <div id="galeriaLivros" class="row d-flex justify-content-center">
-        
-      </div>
-   
-
-      <div id="api-data" class="row justify-content-center">
-         <div class="col-12 spinner-border m-3" role="status" style="width: 5rem; height: 5rem;">
-            <span class="visually-hidden">Loading...</span>
-         </div>
-
-      -->
       </div>
 
 
@@ -178,8 +94,7 @@
           </div>
         </div>
       </div>
-    <!--Referência do script.js-->
-    <script src="script.js"></script>
+
     <!--Referência do Bootstrap (JS)-->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
@@ -187,7 +102,7 @@
     <!--Referência do FontAwesome-->
     <script src="https://kit.fontawesome.com/86c1062090.js" crossorigin="anonymous"></script>
    <!--Referência do apiinfo.js-->
-    <script src="scripts/apiinfo.js" crossorigin="anonymous"></script>
+    <script src="scripts/telaDeAcervo.js" crossorigin="anonymous"></script>
   
   </body>
   

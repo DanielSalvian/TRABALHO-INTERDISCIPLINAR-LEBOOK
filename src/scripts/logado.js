@@ -1,6 +1,5 @@
 
 function carregarLivros() {
-
     fetch('https://phaccess.vercel.app/livros', {
         method: 'GET',
         headers: {
@@ -10,7 +9,7 @@ function carregarLivros() {
         .then(response => response.json())
         .then(data => {
             let livro = ``;
-            for (i = data.length-1; i > data.length - 5; i--) {
+            for (i = 0; i < data.length; i++) {
                 livro += `<div class="card-livro">
                     <div class="img-camp">
                     <img src="data:image/png;base64,${data[i].capa}" alt="" class="img-livro">
@@ -23,14 +22,4 @@ function carregarLivros() {
         })
         .catch(error => console.error('Erro ao encontrar os dados:', error));
 
-}
-
-//teste para o futuro
-function verificarLogin(){
-    let dadosLogin = localStorage.getItem('.....');
-    dadosLogin = JSON.parse(dadosLogin);
-
-    if(dadosLogin[0].status="logado"){
-        console.log("logado")
-    }
 }

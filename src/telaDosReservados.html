@@ -156,7 +156,7 @@
   </style>
 </head>
 
-<body>
+<body onload="mostrarReservas()">
   <header>
     <nav class="navbar navbar-expand-lg sombras-nav bg-padrao">
       <div class="container-fluid">
@@ -180,42 +180,7 @@
   <main class="container my-5">
     <div id="livros" class="row justify-content-center">
       <!-- Os cards são adicionados aqui diretamente no HTML -->
-      <div class="card-livro">
-        <img src="livro.jpg" alt="Nome do livro 1" class="capa-livro">
-        <div class="info-livro">
-          <h3>Nome do livro 1</h3>
-          <p>Devolução: 25/12/2024</p>
-          <p>Situação: Regular</p>
-          <div>
-            <button class="btn-padrao" onclick="showModal('Estender prazo')">Estender prazo</button>
-            <button class="btn-padrao" onclick="showModal('Devolver')">Devolver</button>
-          </div>
-        </div>
-      </div>
-      <div class="card-livro">
-        <img src="livro.jpg" alt="Nome do livro 2" class="capa-livro">
-        <div class="info-livro">
-          <h3>Nome do livro 2</h3>
-          <p>Devolução: 30/06/2024</p>
-          <p>Situação: Regular</p>
-          <div>
-            <button class="btn-padrao" onclick="showModal('Estender prazo')">Estender prazo</button>
-            <button class="btn-padrao" onclick="showModal('Devolver')">Devolver</button>
-          </div>
-        </div>
-      </div>
-      <div class="card-livro">
-        <img src="livro.jpg" alt="Nome do livro 3" class="capa-livro">
-        <div class="info-livro">
-          <h3>Nome do livro 3</h3>
-          <p>Devolução: 15/07/2024</p>
-          <p>Situação: Regular</p>
-          <div>
-            <button class="btn-padrao" onclick="showModal('Estender prazo')">Estender prazo</button>
-            <button class="btn-padrao" onclick="showModal('Devolver')">Devolver</button>
-          </div>
-        </div>
-      </div>
+      <h3>Nenhum emprestimo!</h3>
     </div>
   </main>
 
@@ -238,4 +203,50 @@
                 @lebook.ofc</a></li>
             <li class="mb-2"><i class="fa-solid fa-phone me-2"></i><a href="tel:+3133921187" class="info text-white">
                 (31) 3392-1187</a></li>
-            <li class="mb-2"><i
+            <li class="mb-2"><i class="fa-regular fa-envelope me-2"></i><a href="mailto:lebook@hotmail.com"
+                class="info text-white"> lebook@hotmail.com</a></li>
+          </ul>
+        </div>
+        <div class="col-md-6 mb-4">
+          <h5 class="mb-3">Outros links úteis</h5>
+          <ul class="list-unstyled">
+            <li class="mb-2"><a href="#" class="info text-white">Quem somos</a></li>
+            <li class="mb-2"><a href="#" class="info text-white">Ajuda</a></li>
+            <li class="mb-2"><a href="#" class="info text-white">Dúvidas frequentes</a></li>
+            <li class="mb-2"><a href="#" class="info text-white">Termos de privacidade</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col text-center mt-3">
+          <ul class="list-inline">
+            <li class="list-inline-item me-3">
+              <a href="#" class="text-white">
+                <i class="fa-brands fa-facebook fa-2x"></i>
+              </a>
+            </li>
+            <li class="list-inline-item me-3">
+              <a href="#" class="text-white">
+                <i class="fa-brands fa-twitter fa-2x"></i>
+              </a>
+            </li>
+            <li class="list-inline-item me-3">
+              <a href="#" class="text-white">
+                <i class="fa-brands fa-instagram fa-2x"></i>
+              </a>
+            </li>
+
+            <li class="list-inline-item">
+              <a href="#" class="text-white">
+                <i class="fa-brands fa-linkedin fa-2x"></i>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="scripts/telaDosReservados.js"></script>
