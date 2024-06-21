@@ -10,7 +10,8 @@
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
   <!-- Fontes GoogleFonts -->
   <style>
-    @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Leckerli+One&display=swap');
+    @import url('');
 
     body {
       font-family: 'Roboto', sans-serif;
@@ -24,7 +25,7 @@
     }
 
     .bg-padrao {
-      background-color: #33ac98;
+      background-color: #57CC99;
     }
 
     .sombras-nav {
@@ -32,6 +33,7 @@
     }
 
     .profile-container {
+      position: relative;
       max-width: 500px;
       margin: 50px auto;
       background-color: #fff;
@@ -47,7 +49,7 @@
       border-radius: 50%;
       margin-bottom: 20px;
       object-fit: cover;
-      border: 3px solid #33ac98;
+      border: 3px solid #57CC99;
     }
 
     .profile-info h3 {
@@ -63,8 +65,7 @@
     }
 
     .profile-info .btn-padrao {
-      background-color: #387dc7;
-      ;
+      background-color: #80ED99;
       color: white;
       border: none;
       padding: 10px 20px;
@@ -76,63 +77,48 @@
     }
 
     .profile-info .btn-padrao:hover {
-      background-color: #2d9a82;
+      background-color: #80ED99;
     }
 
     footer {
-      background-color: #33ac98;
+      background-color: #57CC99;
       color: white;
       padding: 20px 0;
-      position: fixed;
       width: 100%;
       bottom: 0;
       box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.2);
       text-align: center;
     }
 
-    footer ul {
-      list-style-type: none;
-      padding: 0;
-    }
-
-    footer ul li {
-      margin: 5px 0;
-    }
-
-    footer ul li a {
-      color: white;
-      text-decoration: none;
-    }
-
-    footer ul li a:hover {
-      text-decoration: underline;
-    }
+   
   </style>
 </head>
 
 <body onload="exibirInfoUsuario()">
 
-  <header>
-    <nav class="navbar navbar-expand-lg sombras-nav bg-padrao p-3">
-      <div class="container-fluid">
-        <a class="navbar-brand fonte-logo fs-1 text-white" href="telaLogado.html">LêBook</a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
-          aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse justify-content-end" id="navbarNavAltMarkup">
-          <div class="navbar-nav">
-            <a class="nav-link text-white" href="telaLogado.html">Home</a>
-            <a class="nav-link text-white" href="telaDeAcervo.html">Acervo</a>
-            <a class="nav-link text-white" href="telaDosReservados.html">Reservados</a>
-            <a class="nav-link text-white active" href="telaDePerfil.html">Perfil</a>
+  
+    <header>
+      <nav class="navbar navbar-expand-lg sombras-nav bg-padrao">
+        <div class="container-fluid">
+          <a class="navbar-brand fonte-logo fs-1 text-white" href="#">LêBook</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
+            aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse justify-content-end" id="navbarNavAltMarkup">
+            <div class="navbar-nav nav-underline pe-5">
+              <a class="nav-link text-white" href="#">Home</a>
+              <a class="nav-link text-white" href="telaDeAcervo.html">Acervo</a>
+              <a class="nav-link text-white" href="telaDosReservados.html">Reservados</a>
+              <a class="nav-link text-white active" aria-current="page" href="">Perfil</a>
+            </div>
           </div>
         </div>
-      </div>
-    </nav>
-  </header>
+      </nav>
+    </header>
 
-  <main class="container mt-5 mb-5">
+  
+<main class="content">
     <div class="profile-container">
       <img src="estilos/Imagens/usuariopadrão.webp" class="profile-img" alt="User Profile Picture">
       <div class="profile-info">
@@ -144,28 +130,43 @@
     </div>
   </main>
 
-  <footer>
-    <div class="container">
-      <ul>
-        <li><i class="fas fa-map-marker-alt me-2"></i> Rua C N°65 Água Branca</li>
-        <li><i class="fab fa-instagram me-2"></i> @lebook.ofc</li>
-        <li><i class="fas fa-phone me-2"></i> (31) 3392-1187</li>
-        <li><i class="far fa-envelope me-2"></i> lebook@hotmail.com</li>
-      </ul>
-      <ul>
-        <li><a href="#">Quem somos</a></li>
-        <li><a href="#">Ajuda</a></li>
-        <li><a href="#">Dúvidas frequentes</a></li>
-        <li><a href="#">Termos de privacidade</a></li>
-      </ul>
-    </div>
-  </footer>
+  <footer class="sombras-footer bg-padrao text-white">
+    <div class="container py-5">
+      <div class="row">
+        <!-- Contatos -->
+        <div class="col-md-6 mb-4 mb-md-0">
+          <h5 class="mb-3">Métodos de contato</h5>
+          <ul class="list-unstyled">
+            <li><i class="fas fa-map-marker-alt me-2"></i> Rua C N°65 Água Branca</li>
+            <li><i class="fab fa-instagram me-2"></i> @lebook.ofc</li>
+            <li><i class="fas fa-phone me-2"></i> (31) 3392-1187</li>
+            <li><i class="far fa-envelope me-2"></i> lebook@hotmail.com</li>
+          </ul>
+        </div>
 
-  <script src="scripts/apiinfo.js"></script>
-  <script src="scripts/cadastro.js"></script>
-  <script src="scripts/telaDePerfil.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+        <!-- Outros -->
+        <div class="col-md-6">
+          <h5 class="mb-3">Outros links úteis</h5>
+          <ul class="list-unstyled">
+            <li><a href="#" class="text-white">Quem somos</a></li>
+            <li><a href="#" class="text-white">Ajuda</a></li>
+            <li><a href="#" class="text-white">Dúvidas frequentes</a></li>
+            <li><a href="#" class="text-white">Termos de privacidade</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  <!--Referência do script.js-->
+  <script src="script.js"></script>
+  <!--Referência do Bootstrap (JS)-->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+    crossorigin="anonymous"></script>
+  <!--Referência do FontAwesome-->
   <script src="https://kit.fontawesome.com/86c1062090.js" crossorigin="anonymous"></script>
+ <!--Referência do apiinfo.js-->
+  <script src="scripts/apiinfo.js" crossorigin="anonymous"></script>
+
 </body>
 
 </html>
