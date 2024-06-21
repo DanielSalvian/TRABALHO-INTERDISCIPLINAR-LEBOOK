@@ -57,7 +57,7 @@ function contarReservas(){
         usuarioAtual = JSON.parse(usuarioAtual);
     }
 
-let url = `https://phaccess.vercel.app/emprestimo?email=${usuarioAtual.email}`;
+let url = `https://phaccess.vercel.app/emprestimo?email="${usuarioAtual.email}"`;
 
     fetch(url, {
         method: 'GET',
@@ -65,6 +65,7 @@ let url = `https://phaccess.vercel.app/emprestimo?email=${usuarioAtual.email}`;
           'Content-Type': 'application/json'
         }
       })
+    
         .then(response => response.json())
         .then(async data => {
           let contagem = data.length;
@@ -72,5 +73,6 @@ let url = `https://phaccess.vercel.app/emprestimo?email=${usuarioAtual.email}`;
 
           document.getElementById("user-books").textContent = contagem;
         })
+        
         .catch(error => console.error('Erro ao enviar os dados:', error));
 }
