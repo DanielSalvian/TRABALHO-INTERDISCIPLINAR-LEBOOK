@@ -15,33 +15,33 @@
   <style>
     @import url('https://fonts.googleapis.com/css2?family=Leckerli+One&display=swap');
    
-    footer {
-    position: fixed;
-    bottom: 0;
-    width: 100%;
-}
+    
 
   </style>
 </head>
 
 <body>
 
+  
   <header>
     <nav class="navbar navbar-expand-lg sombras-nav bg-padrao">
       <div class="container-fluid">
-       
+        <a class="navbar-brand fonte-logo fs-1 text-white" href="#">LêBook</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
+          aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
         <div class="collapse navbar-collapse justify-content-end" id="navbarNavAltMarkup">
           <div class="navbar-nav nav-underline pe-5">
-            <a class="nav-link" href="telaDeslogado.html">Home</a>
-            <a class="nav-link" href="telaDeAcervo.html">Acervo</a>
-            <a class="nav-link" href="telaDeLogin.html">Reservados</a>
-            <a class="nav-link active" aria-current="page" href="telaDeLogin.html">Entrar</a>
+            <a class="nav-link text-white" href="#">Home</a>
+            <a class="nav-link text-white" href="telaDeAcervo.html">Acervo</a>
+            <a class="nav-link text-white" href="telaDosReservados.html">Reservados</a>
+            <a class="nav-link text-white" href="">Perfil</a>
           </div>
         </div>
       </div>
     </nav>
   </header>
-
 <main class="content">
   <div class="parte1">
 <div class="imagem">
@@ -50,11 +50,11 @@
   </div>
   <div class="parte2">
     <div class="logo"><h2 class="logo-perfil">Lebook</h2></div>
-      <h3 class="email-title">Email</h3>
+      <h5 class="email-title">Email</h5>
        <input id="emailLogin" type="email" class="form-control rounded-pill" placeholder="email@lebook.com">
-      <h3 class="senha-title">Senha</h3>
+      <h5 class="senha-title">Senha</h5>
       <input id="senhaLogin" type="password" class="form-control rounded-pill" placeholder="Senha">
-      <button class="login"  onclick="login()">Login</button><br>
+      <button class="login"  onclick="login()" class="btn btn-padrao">Login</button><br>
       <a href="telaDeCadastro.html" class="cadastrar">Ainda não possui uma conta? Faça logo seu cadastro!</a>
     </div>
 </main>

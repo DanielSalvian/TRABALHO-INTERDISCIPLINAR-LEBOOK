@@ -9,7 +9,7 @@
     justify-content: center;
     align-items: center;
     align-content: center;
-    padding-left: 300px;
+    padding-left: 2S00px;
     
 }
 
@@ -22,14 +22,14 @@
 
 .imagem{
     position: relative;
-    right: 100%;
+    right: 50%;
 }
 .img-login{
-    width: 130%;
-    padding-top: 100px;
+    width: 100%;
+    padding-top: 10px;
 }
 .parte2{
-    height: 600px;
+    height: 700px;
     align-content: center;
 }
 .logo-perfil{
@@ -39,16 +39,16 @@
     font-weight: 400;
     font-style: normal;
     margin-bottom: 40px;
-    margin-left: 120px;
+    margin-left: 100px;
 }
 #senhaLogin,#emailLogin{
-margin-bottom: 40px;
+margin-bottom: 20px;
 font-size: 24px;
 border: 2px solid grey;
 }
 
 .login{
-    font-size: 25px;
+    font-size: 15px;
     margin-left: 160px;
     padding-top: 15px ;
     padding-bottom: 15px;
@@ -93,7 +93,7 @@ border: 2px solid grey;
         right: 70%;
     }
     .parte2{
-        padding-right: 100px;
+        padding-right: 600px;
     }
 }
 
@@ -152,7 +152,7 @@ border: 2px solid grey;
 
     #senhaLogin,#emailLogin{
         font-size: 24px;
-        width: 500px;
+        width: 100px;
         }
 
         .cadastrar{
@@ -182,7 +182,7 @@ border: 2px solid grey;
             }
 
             #senhaLogin,#emailLogin{
-                margin-left: 200px;
+                margin-left: 100px;
                 width: 350px;
                 }
 
@@ -191,7 +191,7 @@ border: 2px solid grey;
             }
 
             .login{
-                margin-left: 300px;
+                margin-left: 100px;
             }
 
             .cadastrar{
