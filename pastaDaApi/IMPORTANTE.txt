@@ -1,0 +1,2 @@
+O codigo aqui é uma copia do contido no repositorio: https://github.com/YagoArruda/ApiPHP, cujo o quela foi hospedado no vercel,
+O link da api no vercel é: https://vercel.com/yagoarrudas-projects/phaccess

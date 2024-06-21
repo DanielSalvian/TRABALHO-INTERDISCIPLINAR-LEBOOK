@@ -1,0 +1,123 @@
+{
+  "functions": {
+    "api/livros/index.php": {
+      "runtime": "vercel-php@0.7.1"
+    },
+    "api/devolucao/devolucao.php": {
+      "runtime": "vercel-php@0.7.1"
+    },
+    "api/emprestimo/emprestimo.php": {
+      "runtime": "vercel-php@0.7.1"
+    },
+    "api/status_livro/statusLivro.php": {
+      "runtime": "vercel-php@0.7.1"
+    },
+    "api/usuario_livro/usuarioLivro.php": {
+      "runtime": "vercel-php@0.7.1"
+    },
+    "api/docs/docs.php": {
+      "runtime": "vercel-php@0.7.1"
+    },
+    "api/login/login.php": {
+      "runtime": "vercel-php@0.7.1"
+    },
+    "api/livro/livro.php": {
+      "runtime": "vercel-php@0.7.1"
+    },
+    "api/capa/capa.php": {
+      "runtime": "vercel-php@0.7.1"
+    }
+  },
+  "routes": [
+    {
+      "src": "/devolucao",
+      "dest": "/api/devolucao/devolucao.php",
+      "headers": {
+        "Access-Control-Allow-Origin": "*",
+        "Access-Control-Allow-Headers": "Content-Type",
+        "Access-Control-Allow-Methods": "GET, POST, PUT, DELETE"
+      }
+    },
+    {
+      "src": "/emprestimo",
+      "dest": "/api/emprestimo/emprestimo.php",
+      "headers": {
+        "Access-Control-Allow-Origin": "*",
+        "Access-Control-Allow-Headers": "Content-Type",
+        "Access-Control-Allow-Methods": "GET, POST, PUT, DELETE"
+      }
+    },
+    {
+      "src": "/livros",
+      "dest": "/api/livros/index.php",
+      "headers": {
+        "Access-Control-Allow-Origin": "*",
+        "Access-Control-Allow-Headers": "Content-Type",
+        "Access-Control-Allow-Methods": "GET, POST, PUT, DELETE"
+      }
+    },
+    {
+      "src": "/statusLivro",
+      "dest": "/api/status_livro/statusLivro.php",
+      "headers": {
+        "Access-Control-Allow-Origin": "*",
+        "Access-Control-Allow-Headers": "Content-Type",
+        "Access-Control-Allow-Methods": "GET, POST, PUT, DELETE"
+      }
+    },
+    {
+      "src": "/usuarioLivro",
+      "dest": "/api/usuario_livro/usuarioLivro.php",
+      "headers": {
+        "Access-Control-Allow-Origin": "*",
+        "Access-Control-Allow-Headers": "Content-Type",
+        "Access-Control-Allow-Methods": "GET, POST, PUT, DELETE"
+      }
+    },
+    {
+      "src": "/livro",
+      "dest": "/api/livro/livro.php",
+      "headers": {
+        "Access-Control-Allow-Origin": "*",
+        "Access-Control-Allow-Headers": "Content-Type",
+        "Access-Control-Allow-Methods": "GET"
+      }
+    },
+    {
+      "src": "/docs",
+      "dest": "/api/docs/docs.php",
+      "headers": {
+        "Access-Control-Allow-Origin": "*",
+        "Access-Control-Allow-Headers": "Content-Type",
+        "Access-Control-Allow-Methods": "GET"
+      }
+    },
+    {
+      "src": "/login",
+      "dest": "/api/login/login.php",
+      "headers": {
+        "Access-Control-Allow-Origin": "*",
+        "Access-Control-Allow-Headers": "Content-Type",
+        "Access-Control-Allow-Methods": "GET, POST"
+      }
+    },
+    {
+      "src": "/capa",
+      "dest": "/api/capa/capa.php",
+      "headers": {
+        "Access-Control-Allow-Origin": "*",
+        "Access-Control-Allow-Headers": "Content-Type",
+        "Access-Control-Allow-Methods": "GET, POST"
+      }
+    },
+    {
+      "src": "/(.*)",
+      "dest": "/api/livros/index.php",
+      "headers": {
+        "Access-Control-Allow-Origin": "*",
+        "Access-Control-Allow-Headers": "Content-Type",
+        "Access-Control-Allow-Methods": "GET, POST, PUT, DELETE"
+      }
+    }
+  ]
+}
