@@ -76,10 +76,10 @@ border: 2px solid grey;
     
 }
 .contatos{
-    padding-top: 50px;
+    padding-top: 300px;
 }
 
-@media screen and (max-width: 130px) {
+@media screen and (max-width: 1441px) {
 
     .imagem{
         right: 60%;
