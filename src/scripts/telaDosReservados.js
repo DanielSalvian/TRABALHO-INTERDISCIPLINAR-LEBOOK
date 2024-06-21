@@ -6,24 +6,29 @@ function mostrarReservas() {
         usuarioAtual = JSON.parse(usuarioAtual);
     }
 
-    let url = `https://phaccess.vercel.app/emprestimo?email=${usuarioAtual.email}`;
+    let url = `https://phaccess.vercel.app/emprestimo?email="${usuarioAtual.email}"`;
 
     document.getElementById("livros").innerHTML = `<h3>Nenhum emprestimo!</h3>`; 
-
+  
     fetch(url, {
         method: 'GET',
         headers: {
             'Content-Type': 'application/json'
+            
         }
     })
+
         .then(response => response.json())
+       
         .then(async data => {
-            let livros = `<h3>Nenhum emprestimo!</h3>`;
-            
+       
+            let livros = ``;
+        
             for (i = 0; i < data.length; i++) {
                 livros += `<div class="card-livro">
         <img src="data:image/png;base64,${data[i].capa}" alt="Nome do livro" class="capa-livro">
         <div class="info-livro">
+       
           <h3>${data[i].nome}</h3>
           <p>Devolução: ${formatarData(data[i].data)} </p>
           <p>Situação: ${calcularDevolucao(data[i].data)}</p>
