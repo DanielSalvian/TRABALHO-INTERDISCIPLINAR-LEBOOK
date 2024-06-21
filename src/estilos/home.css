@@ -40,6 +40,16 @@
     font-weight: 600;
 }
 
+
+.carousel-indicators{
+    width: 700px;
+
+}
+.carousel-inner{
+    position: relative;
+    left: 30%;
+    margin-top: 50px;
+}
 .vermais{
     padding-top:10px;
     padding-bottom: 10px;
@@ -57,7 +67,10 @@
     .carrossel{
         position: relative;
         right: 250px;
+        width: 930px;
     }
+
+    
 
     .livros{
         margin-left: 20px;
@@ -70,13 +83,19 @@
     .livros{
         margin-left: 150px;
     }
+
+    .carrossel{
+        position: relative;
+        right: 10%;
+    }
+    
 }
 
 @media screen and (max-width: 835px) {
     .carrossel{
         position: relative;
         right: 450px;
-        width: 1200px;
+        width: 800px;
     }
     .livros{
         gap: 20px;
@@ -98,12 +117,27 @@
     .vermais{
         margin-left: 20px;
     }
+
+    .carousel-inner{
+        position: relative;
+        left: 70%;
+        margin-top: 50px;
+    }
+
+    .banner{
+        width: 600px;
+    }
 }
 
 @media screen and (max-width: 601px) {
-    .carrossel{
-        right: 520px;
-        width: 1050px;
+    .carousel-inner{
+        position: relative;
+        left: 60%;
+        margin-top: 50px;
+    }
+
+    .banner{
+        width: 500px;
     }
 
     .img-livro{
@@ -128,9 +162,14 @@
 }
 
 @media screen and (max-width: 415px) {
-    .carrossel{
-        right: 570px;
-        width: 950px;
+    .carousel-inner{
+        position: relative;
+        left: 63%;
+        margin-top: 50px;
+    }
+
+    .banner{
+        width: 300px;
     }
 
 
