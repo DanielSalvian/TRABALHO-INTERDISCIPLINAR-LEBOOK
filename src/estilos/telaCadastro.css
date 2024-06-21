@@ -14,7 +14,7 @@
 }
 
 .navbar-nav .nav-link {
-    color:#57CC99!important;
+    color:#57CC99;
     font-size: 20px;
     font-weight: bold;
   }
@@ -22,7 +22,7 @@
 
 .imagem{
     position: relative;
-    right: 100%;
+    right: 50%;
 }
 .img-cadastro{
     width: 140%;

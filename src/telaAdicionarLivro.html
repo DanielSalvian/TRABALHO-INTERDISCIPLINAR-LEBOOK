@@ -20,7 +20,7 @@
     }
 
     .bg-padrao {
-      background-color: #33ac98;
+      background-color: #57CC99;
     }
 
     .sombras-nav {
@@ -28,18 +28,18 @@
     }
 
     .btn-padrao {
-      background-color: #387dc7;
+      background-color: #80ED99;
       color: white;
       border: none;
       transition: background-color 0.3s;
     }
 
     .btn-padrao:hover {
-      background-color: #2b80db;
+      background-color: #57CC99;
     }
 
     .bg-linha {
-      background-color: #33ac98;
+      background-color: #57CC99;
       height: 5px;
       border-radius: 5px;
     }
@@ -67,15 +67,15 @@
   <header>
     <nav class="navbar navbar-expand-lg sombras-nav bg-padrao">
       <div class="container-fluid">
-        <a class="navbar-brand fonte-logo fs-1 text-white" href="telaLogado.html">LêBook</a>
+        <a class="navbar-brand fonte-logo fs-1 text-white" href="#">LêBook</a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
           aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse justify-content-end" id="navbarNavAltMarkup">
-          <div class="navbar-nav">
+          <div class="navbar-nav nav-underline pe-5">
             <a class="nav-link text-white" href="telaLogado.html">Home</a>
-            <a class="nav-link text-white active" href="telaDeAcervo.html" aria-current="page">Acervo</a>
+            <a class="nav-link text-white" href="telaDeAcervo.html">Acervo</a>
             <a class="nav-link text-white" href="telaDosReservados.html">Reservados</a>
             <a class="nav-link text-white" href="telaDePerfil.html">Perfil</a>
           </div>
@@ -87,7 +87,7 @@
   <main class="container my-5">
     <div class="row justify-content-center">
       <div class="col-lg-3 col-6 text-center">
-        <img src="livro.jpg" id="capaLivro" class="img-fluid mb-2" alt="Capa do Livro"
+        <img src="estilos/Imagens/OIP (1).jpeg" id="capaLivro" class="img-fluid mb-2" alt="Capa do Livro"
           style="max-width: 100%; height: auto;">
         <input type="file" id="inputImagem" accept="image/*" class="form-control">
       </div>
@@ -97,9 +97,11 @@
           <div class="mb-3">
             <input id="nomeLivro" type="text" class="form-control" placeholder="Título do livro" name="titulo">
           </div>
+          <br>
           <div class="mb-3">
             <input id="autorLivro" type="text" class="form-control" placeholder="Autor" name="autor">
           </div>
+          <br>
           <div class="mb-3">
             <input id="generoLivro" type="text" class="form-control" placeholder="Gênero" name="genero">
           </div>
@@ -124,64 +126,43 @@
     </div>
   </main>
 
-  <footer class="sombras-footer bg-padrao mt-5 text-white pt-4">
-    <div class="container">
+  <footer class="sombras-footer bg-padrao text-white">
+    <div class="container py-4">
       <div class="row">
-        <div class="col-md-6 mb-4">
+        <!-- Contatos -->
+        <div class="col-md-6 mb-4 mb-md-0">
           <h5 class="mb-3">Métodos de contato</h5>
           <ul class="list-unstyled">
-            <li class="mb-2"><i class="fa-solid fa-map-location-dot me-2"></i>Rua C N°65 Água Branca</li>
-            <li class="mb-2"><i class="fa-brands fa-instagram me-2"></i><a href="#" class="info text-white">
-                @lebook.ofc</a></li>
-            <li class="mb-2"><i class="fa-solid fa-phone me-2"></i><a href="tel:+3133921187" class="info text-white">
-                (31) 3392-1187</a></li>
-            <li class="mb-2"><i class="fa-regular fa-envelope me-2"></i><a href="mailto:lebook@hotmail.com"
-                class="info text-white"> lebook@hotmail.com</a></li>
+            <li><i class="fas fa-map-marker-alt me-2"></i> Rua C N°65 Água Branca</li>
+            <li><i class="fab fa-instagram me-2"></i> @lebook.ofc</li>
+            <li><i class="fas fa-phone me-2"></i> (31) 3392-1187</li>
+            <li><i class="far fa-envelope me-2"></i> lebook@hotmail.com</li>
           </ul>
         </div>
-        <div class="col-md-6 mb-4">
+
+        <!-- Outros -->
+        <div class="col-md-6">
           <h5 class="mb-3">Outros links úteis</h5>
           <ul class="list-unstyled">
-            <li class="mb-2"><a href="#" class="info text-white">Quem somos</a></li>
-            <li class="mb-2"><a href="#" class="info text-white">Ajuda</a></li>
-            <li class="mb-2"><a href="#" class="info text-white">Dúvidas frequentes</a></li>
-            <li class="mb-2"><a href="#" class="info text-white">Termos de privacidade</a></li>
-          </ul>
-        </div>
-      </div>
-      <div class="row">
-        <div class="col text-center mt-3">
-          <ul class="list-inline">
-            <li class="list-inline-item me-3">
-              <a href="#" class="text-white">
-                <i class="fa-brands fa-facebook fa-2x"></i>
-              </a>
-            </li>
-            <li class="list-inline-item me-3">
-              <a href="#" class="text-white">
-                <i class="fa-brands fa-twitter fa-2x"></i>
-              </a>
-            </li>
-            <li class="list-inline-item me-3">
-              <a href="#" class="text-white">
-                <i class="fa-brands fa-instagram fa-2x"></i>
-              </a>
-            </li>
-            <li class="list-inline-item">
-              <a href="#" class="text-white">
-                <i class="fa-brands fa-linkedin fa-2x"></i>
-              </a>
-            </li>
+            <li><a href="#" class="text-white">Quem somos</a></li>
+            <li><a href="#" class="text-white">Ajuda</a></li>
+            <li><a href="#" class="text-white">Dúvidas frequentes</a></li>
+            <li><a href="#" class="text-white">Termos de privacidade</a></li>
           </ul>
         </div>
       </div>
     </div>
-  </footer>
-
-  <script src="https://kit.fontawesome.com/a076d05399.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <!--Referência do script.js-->
   <script src="script.js"></script>
-  <script src="scripts/adicionarlivro.js"></script>
+  <!--Referência do Bootstrap (JS)-->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+    crossorigin="anonymous"></script>
+  <!--Referência do FontAwesome-->
+  <script src="https://kit.fontawesome.com/86c1062090.js" crossorigin="anonymous"></script>
+ <!--Referência do apiinfo.js-->
+  <script src="scripts/apiinfo.js" crossorigin="anonymous"></script>
+
 </body>
 
 </html>

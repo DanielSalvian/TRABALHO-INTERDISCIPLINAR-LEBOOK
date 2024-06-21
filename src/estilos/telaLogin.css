@@ -4,7 +4,7 @@
 
 
 .content{
-    height: 700px;
+    height: 500px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -49,19 +49,21 @@ border: 2px solid grey;
 
 .login{
     font-size: 15px;
-    margin-left: 160px;
+    margin-left: 100px;
     padding-top: 15px ;
     padding-bottom: 15px;
     padding-left: 40px;
+    justify-content: center;
     padding-right: 40px;
     border-radius: 50px;
     border: none;
     background-color: #57CC99;
     margin-bottom: 20px;
+    position: relative;
 }
 
 .cadastrar{
-    font-size: 20px;  
+    font-size: 15px;  
 }
 
 .contato{
@@ -74,16 +76,16 @@ border: 2px solid grey;
     
 }
 .contatos{
-    padding-top: 80px;
+    padding-top: 50px;
 }
 
-@media screen and (max-width: 1441px) {
+@media screen and (max-width: 130px) {
 
     .imagem{
         right: 60%;
     }
     .contatos{
-        padding-top: 30px;
+        padding-top: 100px;
     }
 }
 
@@ -93,7 +95,7 @@ border: 2px solid grey;
         right: 70%;
     }
     .parte2{
-        padding-right: 600px;
+        padding-right: 100px;
     }
 }
 
@@ -142,6 +144,7 @@ border: 2px solid grey;
     .login{
         font-size: 30px;
         margin-left: 180px;
+        justify-content: center;
        
     }
 
